@@ -4,10 +4,34 @@
 /* ALL SECTIONS */
 body {
 	font-family: "Kumbh Sans", sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	letter-spacing: 0.08em;
 }
 
+h6 {
+	color: hsl(26, 100%, 55%);
+}
+
+h1 {
+	font-weight: 700;
+}
+
+.content-p {
+	color: hsl(219, 9%, 45%);
+}
 
 /* FOOTER */
-.attribution { font-size: 11px; text-align: center; }
+.attribution { 
+	font-size: 11px; 
+	text-align: center; 
+}
 
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution a {
+	color: hsl(228, 45%, 44%); 
+}
+
+/* MOBILE */
+@media only screen and (max-width: 375px) {
+	
+}
