@@ -62,7 +62,7 @@ h1 {
 #add-remove {
 	display: flex;
 	align-items: center;
-	padding: 20px 0px;
+	padding: 16px 0px;
 	background-color: hsl(223, 64%, 98%);
 	border-radius: 12px;
 	margin-right: 20px;
