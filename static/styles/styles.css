@@ -88,11 +88,11 @@ h1 {
 
 #cart-logo {
 	color: white;
-	height: 50%;
 }
 
 #add-to-cart {
-	display: inline-block;
+	display: flex;
+	align-items: center;
 	padding: 15px 70px;
 	background-color: hsl(26, 100%, 55%);
 	border-radius: 12px;
