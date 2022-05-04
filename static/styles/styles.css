@@ -5,8 +5,9 @@
 body {
 	font-family: "Kumbh Sans", sans-serif;
 	font-weight: 400;
-	font-size: 16px;
+	font-size: 14px;
 	letter-spacing: 0.08em;
+	line-height: 1.5;
 }
 
 
@@ -25,6 +26,7 @@ main {
 /* PRODUCT IMAGES */
 #product-images {
 	width: 50vw;
+	padding-right: 100px;
 }
 
 #main-image {
@@ -53,6 +55,7 @@ main {
 /* PRODUCT DESCRIPTION */
 #product-info {
 	width: 50vw;
+	padding-right: 100px;
 }
 
 h6 {
@@ -67,6 +70,8 @@ h1 {
 	color: hsl(219, 9%, 45%);
 }
 
+
+/* PRICES & CART */
 #price-discount {
 	line-height: 22px;
 }
@@ -98,7 +103,6 @@ h1 {
 #cart-option {
 	display: flex;
 	align-items: center;
-    /*justify-content: center;*/
 }
 
 #add-remove {
@@ -156,4 +160,87 @@ h1 {
 /* MOBILE */
 @media only screen and (max-width: 375px) {
 	
+	/* NAV */
+	nav {
+		display: none;
+	}
+	
+	main {
+		flex-direction: column;
+	}
+	
+	/* PRODUCT IMAGES */
+	#main-image {
+		text-align: center;
+	}
+	
+	#product-images {
+		padding: 0px;
+		width: 375px;
+	}
+	
+	#full-size-1 {
+		width: 375px;
+		height: 275px;
+		object-fit: cover;
+		text-align: center;
+		border-radius: 0px;
+	}
+	
+	
+	#all-thumbs {
+		display: none;
+	}
+	
+	/* PRODUCT DESCRIPTION*/
+	h6 {
+		font-size: 12px;
+		margin: 25px 0px 0px 0px;
+	}
+	
+	h1 {
+		font-size: 26px;
+	}
+	
+	#product-info {
+		padding: 0px;
+		width: auto;
+	}
+	
+	#product-desc {
+		padding: 0px 20px;
+	}
+	
+	
+	/* PRICES & CART */
+	#cart-option {
+		flex-direction: column;
+	}
+	
+	#price-info {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0px 20px;
+	}
+	
+	#add-remove {
+		width: 330px;
+		height: 55px;
+		justify-content: space-between;
+		margin: 20px 0px;
+		padding: 0px;
+	}
+	
+	#add-to-cart {
+		width: 330px;
+		height: 55px;
+		margin: 0px;
+		padding: 0px;
+		justify-content: center;
+	}
+	
+	#cart-logo {
+		display: none;
+	}
 }
