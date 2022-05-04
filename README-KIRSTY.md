@@ -97,8 +97,10 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 - [Changing the colour of an SVG](https://stackoverflow.com/questions/22252472/how-to-change-the-color-of-an-svg-element#:~:text=You%20can't%20change%20the,or%20using%20inline.) - This helped me learn how to amend the fill state on an SVG file within a code editor to then allow me to change the colour depending on the icon state or use.
 - [Changing the scale of an SVG](https://css-tricks.com/scale-svg/) - This article helped me in scaling the SVG file to fit required proportions.
+- [Aligning an image to the right in a div](https://stackoverflow.com/questions/3254595/how-to-align-img-inside-the-div-to-the-right) - Stack Overflow answer on how to align a single image within a container div to the right of the div. Answer: `text-align: right;`
+- [Align nested divs to the right](https://stackoverflow.com/questions/7693224/how-do-i-right-align-div-elements) - Stack Overlfow answer on how to align all nested divs to the right of their container div. Answer: `justify-content: center;`
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+
 
 ## Author
 

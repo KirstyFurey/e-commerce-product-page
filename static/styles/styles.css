@@ -9,8 +9,50 @@ body {
 	letter-spacing: 0.08em;
 }
 
+
+/* NAV */
 li {
 	color: hsl(219, 9%, 45%);
+}
+
+
+/* PRODUCT */
+main {
+	display: flex;
+	align-items: center;
+}
+
+/* PRODUCT IMAGES */
+#product-images {
+	width: 50vw;
+}
+
+#main-image {
+	text-align: right;
+}
+
+#full-size-1 {
+	width: 340px;
+	height: 340px;
+	border-radius: 10px;
+	margin-right: 10px;
+}
+
+#all-thumbs {
+	display: flex;
+	justify-content: flex-end;
+}
+
+#image-1, #image-2, #image-3, #image-4 {
+	margin: 20px 10px;
+	height: 70px;
+	width: 70px;
+	border-radius: 10px;
+}
+
+/* PRODUCT DESCRIPTION */
+#product-info {
+	width: 50vw;
 }
 
 h6 {
