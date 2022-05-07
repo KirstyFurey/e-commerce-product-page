@@ -12,10 +12,48 @@ body {
 
 
 /* NAV */
-li {
-	color: hsl(219, 9%, 45%);
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between; 
 }
 
+#nav-logo-items {
+	display: flex;
+	align-items: center;
+}
+
+ul {
+	display: flex;
+	padding: 0px;
+}
+
+li {
+	color: hsl(219, 9%, 45%);
+	text-decoration: none;
+	list-style-type: none;
+	align-items: center;
+	padding: 0px;
+	margin: 0px;
+}
+
+#nav-cart-logo {
+	display: flex;
+	align-items: center;
+}
+
+#nav-cart {
+	justify-content: flex-end;
+}
+
+#profile-icon {
+	margin-right: 10px;
+}
+
+#p-icon {
+	width: 50px;
+	height: 50px;
+}
 
 /* PRODUCT */
 main {
