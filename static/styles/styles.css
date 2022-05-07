@@ -21,6 +21,10 @@ nav {
 	border-bottom-color: hsl(223, 64%, 98%);
 }
 
+#mobile-menu {
+	display: none;
+}
+
 #nav-logo-items {
 	display: flex;
 	align-items: center;
@@ -254,11 +258,25 @@ h1 {
 	
 	/* NAV */
 	nav {
+		border-bottom: none;
+	}
+	
+	#mobile-menu {
+		display: block;
+		padding: 0px 10px;
+	}
+	
+	#mobile-menu:hover {
+		cursor: pointer;
+	}
+	
+	ul {
 		display: none;
 	}
 	
 	main {
 		flex-direction: column;
+		margin-top: 0px;
 	}
 	
 	/* PRODUCT IMAGES */
