@@ -103,14 +103,15 @@ main {
 
 #main-image {
 	text-align: right;
+	
 }
-
+/*
 #full-size-1 {
 	width: 340px;
 	height: 340px;
 	border-radius: 10px;
 	margin-right: 10px;
-}
+}*/
 
 #all-thumbs {
 	display: flex;
