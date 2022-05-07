@@ -99,7 +99,8 @@ Use this section to outline areas that you want to continue focusing on in futur
 - [Changing the scale of an SVG](https://css-tricks.com/scale-svg/) - This article helped me in scaling the SVG file to fit required proportions.
 - [Aligning an image to the right in a div](https://stackoverflow.com/questions/3254595/how-to-align-img-inside-the-div-to-the-right) - Stack Overflow answer on how to align a single image within a container div to the right of the div. Answer: `text-align: right;`
 - [Align nested divs to the right](https://stackoverflow.com/questions/7693224/how-do-i-right-align-div-elements) - Stack Overlfow answer on how to align all nested divs to the right of their container div. Answer: `justify-content: center;`
-
+- [Guide to Flexbox for aligning nav and content](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) - I used this to help me align items to the correct loactions using flexbox.
+- [Cursor styles](https://www.w3schools.com/cssref/pr_class_cursor.asp) - Guid to cursor options to change to pointer on hover
 
 
 ## Author
