@@ -316,6 +316,10 @@ h1 {
 		cursor: pointer;
 	}
 	
+	#prev-chev:hover, #next-chev:hover {
+		cursor: pointer;
+	}
+	
 	#next-chev {
 		display: block;
 		position: absolute;
