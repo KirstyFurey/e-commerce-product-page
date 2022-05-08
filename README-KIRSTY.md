@@ -100,7 +100,9 @@ Use this section to outline areas that you want to continue focusing on in futur
 - [Aligning an image to the right in a div](https://stackoverflow.com/questions/3254595/how-to-align-img-inside-the-div-to-the-right) - Stack Overflow answer on how to align a single image within a container div to the right of the div. Answer: `text-align: right;`
 - [Align nested divs to the right](https://stackoverflow.com/questions/7693224/how-do-i-right-align-div-elements) - Stack Overlfow answer on how to align all nested divs to the right of their container div. Answer: `justify-content: center;`
 - [Guide to Flexbox for aligning nav and content](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) - I used this to help me align items to the correct loactions using flexbox.
-- [Cursor styles](https://www.w3schools.com/cssref/pr_class_cursor.asp) - Guid to cursor options to change to pointer on hover
+- [Cursor styles](https://www.w3schools.com/cssref/pr_class_cursor.asp) - Guid to cursor options to change to pointer on hover.
+- [Use media queries in JavaScript](https://www.w3schools.com/howto/howto_js_media_queries.asp) - This was helpful for how to change the styling of an element created in javascript for mobile users.
+- [Placing one div above another](https://stackoverflow.com/questions/48474/how-do-i-position-one-image-on-top-of-another-in-html#:~:text=As%20the%20simplest%20solution.,left%20of%20the%20first%20image.) - Stack Overflow thread that helped me position the next and previous arrows over the main image div on mobile.
 
 
 ## Author
