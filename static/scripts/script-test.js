@@ -67,8 +67,8 @@ img3.onclick = function () {
 	img1.style.borderStyle= ('none');
 	img2.style.opacity = ('1');
 	img2.style.borderStyle= ('none');
-	img2.style.opacity = ('1');
-	img2.style.borderStyle= ('none');
+	img4.style.opacity = ('1');
+	img4.style.borderStyle= ('none');
 }
 
 img4.onclick = function () {
@@ -102,6 +102,24 @@ img1.onclick = function () {
 	img4.style.opacity = ('1');
 	img4.style.borderStyle= ('none');
 }
+
+img1.focus = function () {
+	img1.style.opacity = ('0.5');
+}
+
+img2.focus = function () {
+	img2.style.opacity = ('0.5');
+}
+
+img3.focus = function () {
+	img3.style.opacity = ('0.5');
+}
+
+img4.focus = function () {
+	img4.style.opacity = ('0.5');
+}
+
+
 
 let previous = document.getElementById('prev-chev');
 

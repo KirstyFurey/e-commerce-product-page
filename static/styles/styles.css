@@ -110,6 +110,11 @@ main {
 .full-images {
 	height: 340px;
 	width: 340px;
+	display: none;
+}
+
+#main-1 {
+	display: block;
 }
 
 .prod-img {
@@ -136,7 +141,7 @@ main {
 	opacity: 0.5;
 	cursor: pointer;
 }
-/*
+
 #image-1:active, #image-2:active, #image-3:active, #image-4:active {
 	opacity: 0.5;
 	box-sizing: border-box;
@@ -145,7 +150,7 @@ main {
 	border-radius: 10px;
 	color: hsl(26, 100%, 55%);
 	cursor: pointer;
-}*/
+}
 
 #previous, #next {
 	display: none;
