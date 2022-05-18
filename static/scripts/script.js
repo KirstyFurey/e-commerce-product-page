@@ -57,6 +57,7 @@ function replaceImage4() {
 
 thumb4.onclick = replaceImage4;
 
+/*
 const mobileNav = document.getElementById('mobile-menu');
 const mNav = document.getElementById('m-nav');
 const close = document.getElementById('close');
@@ -71,10 +72,27 @@ function closeMobileNav() {
 
 mobileNav.onclick = openMobileNav;
 close.onclick = closeMobileNav;
+*/
 
+const btns = document.getElementsByClassName('btn');
+const close = document.getElementsByClassName('close');
+const modals = document.getElementsByClassName('modal');
 
+[...btns].forEach((btn, ind) => {
+  btn.onclick = () => (modals[ind].style.display = 'block');
+});
 
+[...close].forEach((close, ind) => {
+  close.onclick = () => (modals[ind].style.display = 'none');
+});
 
+window.onclick = (e) => {
+  [...modals].forEach((modals) => {
+    if (e.target === modals) {
+      modals.style.display = 'none';
+    }
+  });
+};
 
 
 thumb2.onclick = replaceImage2;

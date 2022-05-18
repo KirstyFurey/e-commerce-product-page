@@ -16,7 +16,7 @@ button {
 	border: none;
 }
 
-/* The Modal (background) */
+/* MOBILE NAV */
 #m-nav {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -34,7 +34,7 @@ button {
 #mobile-nav {
     background-color: #fff;
     padding: 20px;
-    width: 60%; /* Could be more or less, depending on screen size */
+    width: 60%;
     height: 100%;
 }
 
@@ -129,6 +129,43 @@ li:hover {
 	border-width: thin;
 	border-radius: 20px;
 	color: hsl(26, 100%, 55%);
+	cursor: pointer;
+}
+
+/*CART MODAL*/
+#cart-modal {
+	display: none;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+}
+
+#c-modal {
+	height: 250px;
+	width: 355px;
+	border-radius: 10px;
+	box-shadow: 5px 5px 20px 5px #c9c9c9;
+    position: fixed; /* Stay in place */
+	top: 100px;
+	right: 40px;
+    z-index: 1; /* Sit on top */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: #fff;
+}
+
+#cart-modal-header {
+	padding: 20px 0px 20px 20px;
+	border-bottom-style: solid;
+	border-bottom-color: hsl(223, 64%, 98%);
+	font-weight: 700;
+}
+
+#empty-msg {
+	text-align: center;
+    line-height: 130px;
 }
 
 /* PRODUCT */
@@ -353,6 +390,14 @@ h1 {
         border: none;
 }
 	
+	
+	/*MODALS*/
+	/*CART MODAL*/
+	#c-modal {
+		right: 10px;
+		top: 120px;
+		box-shadow: 5px 5px 20px 5px #6d6d6d;
+	}
 	
 	main {
 		flex-direction: column;

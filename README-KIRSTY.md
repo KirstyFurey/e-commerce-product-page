@@ -105,6 +105,7 @@ Use this section to outline areas that you want to continue focusing on in futur
 - [Placing one div above another](https://stackoverflow.com/questions/48474/how-do-i-position-one-image-on-top-of-another-in-html#:~:text=As%20the%20simplest%20solution.,left%20of%20the%20first%20image.) - Stack Overflow thread that helped me position the next and previous arrows over the main image div on mobile.
 - [Add an ID to a newly created element](https://www.educative.io/edpresso/how-to-add-an-id-to-element-in-javascript) - How to add an ID to the main image  created via javascript.
 - [Modal for mobile nav](https://www.w3schools.com/howto/howto_css_modals.asp) - Code for writing a modal to house the mobile nav that pops out on button click
+- [Code for multiple modals](https://stackoverflow.com/questions/40645032/creating-multiple-modals-on-a-single-page) - I amended code from this Stackoverflow thread to allow me to open and close multiple modals on a page.
 
 
 ## Author
