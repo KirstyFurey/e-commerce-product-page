@@ -57,6 +57,20 @@ function replaceImage4() {
 
 thumb4.onclick = replaceImage4;
 
+const mobileNav = document.getElementById('mobile-menu');
+const mNav = document.getElementById('m-nav');
+const close = document.getElementById('close');
+
+function openMobileNav() {
+	mNav.style.display = ('block');
+}
+
+function closeMobileNav() {
+	mNav.style.display = ('none');
+}
+
+mobileNav.onclick = openMobileNav;
+close.onclick = closeMobileNav;
 
 
 

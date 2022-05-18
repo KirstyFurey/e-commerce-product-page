@@ -10,6 +10,49 @@ body {
 	line-height: 1.5;
 }
 
+button {
+	border-radius: 0px;
+	background-color: #fff;
+	border: none;
+}
+
+/* The Modal (background) */
+#m-nav {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+#mobile-nav {
+    background-color: #fff;
+    padding: 20px;
+    width: 60%; /* Could be more or less, depending on screen size */
+    height: 100%;
+}
+
+/* The Close Button */
+#close {
+    color: #aaa;
+    float: left;
+    font-size: 28px;
+    font-weight: bold;
+	margin: 0px 10px;
+}
+
+#close:hover,
+#close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
 
 /* NAV */
 nav {
@@ -21,7 +64,7 @@ nav {
 	border-bottom-color: hsl(223, 64%, 98%);
 }
 
-#mobile-menu {
+#mobile-menu, #m-nav {
 	display: none;
 }
 
@@ -288,9 +331,28 @@ h1 {
 		cursor: pointer;
 	}
 	
-	ul {
+	#desktop-nav {
 		display: none;
 	}
+	
+	#m-nav-ul {
+		flex-direction: column;
+	}
+	
+	li {
+        color: black;
+        padding: 0px 10px;
+		font-weight: 700;
+		padding-bottom: 15px;
+}
+
+    li:hover {
+        color: hsl(220, 13%, 13%);
+        cursor: pointer;
+        box-sizing: none;
+        border: none;
+}
+	
 	
 	main {
 		flex-direction: column;
@@ -318,7 +380,6 @@ h1 {
 		display: block;
 		position: absolute;
 		top: 230px;
-		z-index: 1;
 		height: 35px;
 		width: 35px;
 		background-color: white;
@@ -329,7 +390,6 @@ h1 {
 	#previous {
 		display: block;
 		position: absolute;
-		z-index: 1;
 		margin-left: 11px;
 		top: 11px;
 		height: 12px;
@@ -348,7 +408,6 @@ h1 {
 		display: block;
 		position: absolute;
 		top: 230px;
-		z-index: 1;
 		height: 35px;
 		width: 35px;
 		background-color: white;
@@ -359,7 +418,6 @@ h1 {
 	#next {
 		display: block;
 		position: absolute;
-		z-index: 1;
 		margin-left: 13px;
 		top: 11px;
 		height: 12px;
