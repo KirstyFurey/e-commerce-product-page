@@ -117,7 +117,7 @@ main {
 	display: block;
 }
 
-.prod-img {
+#prod-img {
 	height: 100%;
 	width: 100%;
 	border-radius: 10px;
@@ -299,8 +299,19 @@ h1 {
 	
 	/* PRODUCT IMAGES */
 	#main-image {
-		text-align: center;
-		position: relative;
+		margin: 0px;
+		justify-content: center;
+	}
+	
+	.full-images {
+		width: 375px;
+	}
+	
+	#prod-img {
+		height: 340px;
+		width: 375px;
+		border-radius: 0px;
+		margin: 0px;
 	}
 	
 	#prev-chev {
@@ -358,6 +369,7 @@ h1 {
 	#product-images {
 		padding: 0px;
 		width: 375px;
+		margin: 0px;
 	}
 	
 	#all-thumbs {
@@ -377,6 +389,7 @@ h1 {
 	#product-info {
 		padding: 0px;
 		width: auto;
+		margin: 0px;
 	}
 	
 	#product-desc {
