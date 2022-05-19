@@ -1,4 +1,28 @@
 // JavaScript Document
+
+//OPEN AND CLOSE MULTIPLE MODALS
+const btns = document.getElementsByClassName('btn');
+const close = document.getElementsByClassName('close');
+const modals = document.getElementsByClassName('modal');
+
+[...btns].forEach((btn, ind) => {
+  btn.onclick = () => (modals[ind].style.display = 'block');
+});
+
+[...close].forEach((close, ind) => {
+  close.onclick = () => (modals[ind].style.display = 'none');
+});
+
+//WORKS BY ADDING THE CLASS 'MODAL' TO THE CONTAINER ELEMENT HOLDING THE ELEMENT WITH THE MODAL CONTENT, AND SETTING THIS TO THE FULL SIZE OF THE PAGE, SO CLICKING ANYWHERE OUTSIDE OF THE ELEMENT WITH THE MODAL CONTENT IS CLICKING ON THE ELEMENT WITH THE CLASS OF MODAL
+window.onclick = (e) => {
+  [...modals].forEach((modals) => {
+    if (e.target === modals) {
+      modals.style.display = 'none';
+    }
+  });
+};
+
+
 //GET THE IDS TO REPLACE IMAGES ON CLICK OF THUMBNAIL
 const thumb1 = document.getElementById('image-1');
 const thumb2 = document.getElementById('image-2');
@@ -57,42 +81,72 @@ function replaceImage4() {
 
 thumb4.onclick = replaceImage4;
 
+//CHANGE IMAGE ON MOBILE
+
+//GET THE NEXT AND PREVIOUS BUTTONS
+const prev = document.getElementById('prev-img');
+const mobIm = document.getElementById('prod-img');
+const mobIm4 = document.getElementById('mobile-4');
+
+
+
+
+
+
+
 /*
-const mobileNav = document.getElementById('mobile-menu');
-const mNav = document.getElementById('m-nav');
-const close = document.getElementById('close');
-
-function openMobileNav() {
-	mNav.style.display = ('block');
+function replaceMobIm() {
+	mobIm.src = "static/images/image-product-4.jpg";
 }
 
-function closeMobileNav() {
-	mNav.style.display = ('none');
+prev.onclick = replaceMobIm;*/
+/*
+function replaceMobIm() {
+	if (mobIm.src == "static/images/image-product-1.jpg") {
+        mobIm.innerHTML.src = "static/images/image-product-4.jpg"
+	} else if (mobIm.src == "static/images/image-product-2.jpg") {
+        mobIm.src = "static/images/image-product-1.jpg"
+	} else if (mobIm.src == "static/images/image-product-3.jpg") {
+        mobIm.src = "static/images/image-product-2.jpg"
+	} else if (mobIm.src == "static/images/image-product-4.jpg") {
+        mobIm.src = "static/images/image-product-3.jpg"
+	} else {
+		return;
+	}
 }
 
-mobileNav.onclick = openMobileNav;
-close.onclick = closeMobileNav;
+prev.onclick = replaceMobIm;
+*/
+/*
+
+function replaceMobIm() {
+	mobIm.setAttribute('id', 'mobile-1');
+	if (mobIm.id == 'mobile-1') {
+		mobIm.src = "static/images/image-product-4.jpg";
+		mobIm.setAttribute('id', 'mobile-4');
+	} else if (mobIm4.id == 'mobile-4') {
+		mobIm4.src = "static/images/image-product-3.jpg"
+		mobIm4.setAttribute('id', 'mobile-3');
+	} else {
+		return;
+	}
+}
+prev.onclick = replaceMobIm;
+
 */
 
-const btns = document.getElementsByClassName('btn');
-const close = document.getElementsByClassName('close');
-const modals = document.getElementsByClassName('modal');
-
-[...btns].forEach((btn, ind) => {
-  btn.onclick = () => (modals[ind].style.display = 'block');
-});
-
-[...close].forEach((close, ind) => {
-  close.onclick = () => (modals[ind].style.display = 'none');
-});
-
-window.onclick = (e) => {
-  [...modals].forEach((modals) => {
-    if (e.target === modals) {
-      modals.style.display = 'none';
-    }
-  });
-};
 
 
-thumb2.onclick = replaceImage2;
+
+
+
+
+
+
+
+
+
+
+
+
+	
