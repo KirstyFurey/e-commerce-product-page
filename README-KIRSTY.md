@@ -107,6 +107,7 @@ Use this section to outline areas that you want to continue focusing on in futur
 - [Modal for mobile nav](https://www.w3schools.com/howto/howto_css_modals.asp) - Code for writing a modal to house the mobile nav that pops out on button click
 - [Code for multiple modals](https://stackoverflow.com/questions/40645032/creating-multiple-modals-on-a-single-page) - I amended code from this Stackoverflow thread to allow me to open and close multiple modals on a page.
 -[Image Gallery](https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp) - Create a slideshow gallery to move through images. I was initially trying to do this too much out of my own head without really knowing how, via JavaScript and losing functionality like hover states, and struggling to make the code re-usable to move through the images. Went back to basics and amended code from here and tried to learn what each part was achieving. 
+-[Disable onclick event on mobile](https://localcoder.org/disable-anchor-menu-click-on-mobile-devices) - learned `pointer-events: none;` to disable the onclick function that opens the lightbox modal on mobile devices.
 
 
 ## Author

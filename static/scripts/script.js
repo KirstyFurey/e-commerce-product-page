@@ -22,6 +22,36 @@ window.onclick = (e) => {
   });
 };
 
+// LIGHTBOX
+let lbSlideIndex = 1;
+lbShowSlides(lbSlideIndex);
+
+// Next/previous controls
+function lbPlusSlides(n) {
+  lbShowSlides(lbSlideIndex += n);
+}
+
+// Thumbnail image controls
+function lbCurrentSlide(n) {
+  lbShowSlides(lbSlideIndex = n);
+}
+
+function lbShowSlides(n) {
+  let i;
+  let lbSlides = document.getElementsByClassName("lb-mySlides");
+  let lbThumb = document.getElementsByClassName("lb-thumbnail");
+  if (n > lbSlides.length) {lbSlideIndex = 1}
+  if (n < 1) {lbSlideIndex = lbSlides.length}
+  for (i = 0; i < lbSlides.length; i++) {
+    lbSlides[i].style.display = "none";
+  }
+  for (i = 0; i < lbThumb.length; i++) {
+    lbThumb[i].className = lbThumb[i].className.replace(" active", "");
+  }
+  lbSlides[lbSlideIndex-1].style.display = "block";
+  lbThumb[lbSlideIndex-1].className += " active";
+}
+
 // IMAGES
 let slideIndex = 1;
 showSlides(slideIndex);

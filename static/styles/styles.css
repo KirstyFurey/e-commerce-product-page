@@ -27,7 +27,7 @@ button {
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
 }
 
 /* Modal Content/Box */
@@ -131,6 +131,137 @@ li:hover {
 	color: hsl(26, 100%, 55%);
 	cursor: pointer;
 }
+
+/* LIGHTBOX MODAL */
+.lightbox {
+	display: none;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+}
+#lb-contain {
+    z-index: 1; /* Sit on top */
+    overflow: auto; /* Enable scroll if needed */
+	margin-top: 150px;
+}
+
+.lb-mainim-contain {
+	display: flex;
+	justify-content: center;
+}
+
+.lb-mySlides {
+	display: none;
+    height: 400px;
+	width: 400px;
+	padding-right: 10px;
+}
+
+.lb-main-images {
+	height: 100%;
+	width: 100%;
+	border-radius: 10px;
+}
+
+/* LIGHTBOX PREVIOUS & NEXT ARROWS */
+#lb-prev-img {
+    display: block;
+    height: 340px;
+    width: 70px;
+    position: absolute;
+    top: 110px;
+}
+
+#lb-prev-chev {
+    display: block;
+    position: absolute;
+    top: 250px;
+    height: 35px;
+    width: 35px;
+    background-color: white;
+    border-radius: 30px;
+    margin-left: 10px;
+}
+
+#lb-previous {
+    display: block;
+    position: absolute;
+    margin-left: 8px;
+    top: 11px;
+    height: 12px;
+    width: 9px;
+}
+
+#lb-previous:hover, #lb-next:hover {
+    cursor: pointer;
+}
+
+#lb-prev-chev:hover, #lb-next-chev:hover {
+    cursor: pointer;
+}
+
+#lb-next-chev {
+    display: block;
+    position: absolute;
+    top: 250px;
+    height: 35px;
+    width: 35px;
+    background-color: white;
+    border-radius: 30px;
+    margin-left: 20px;
+}
+
+#lb-next-img {
+    display: block;
+    height: 340px;
+    width: 70px;
+    position: absolute;
+    top: 110px;
+    right: 0px;
+}
+
+#lb-next {
+    display: block;
+    position: absolute;
+    margin-left: 10px;
+    top: 11px;
+    height: 12px;
+    width: 9px;
+}
+
+.lb-thumbnail {
+	margin: 20px 10px;
+	height: 70px;
+	width: 70px;
+	border-radius: 10px;
+}
+
+.lb-thumb-contain {
+	display: flex;
+	justify-content: center;
+}
+
+.lb-thumb {
+    display: flex;
+}
+
+.lb-thumbnail {
+	margin: 20px 10px;
+	height: 70px;
+	width: 70px;
+	border-radius: 10px;
+}
+
+.lb-thumb-contain:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 
 /*CART MODAL*/
 #cart-modal {
@@ -410,6 +541,9 @@ h1 {
 		box-shadow: 5px 5px 20px 5px #6d6d6d;
 	}
 	
+	/* LIGHTBOX MODAL */
+	
+	
 	main {
 		flex-direction: column;
 		margin-top: 0px;
@@ -429,6 +563,7 @@ h1 {
 		padding: 0px;
 		height: 280px;
 		width: 375px;
+		pointer-events: none;
 	}
 	
 	.main-images {
