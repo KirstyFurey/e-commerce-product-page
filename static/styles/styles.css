@@ -169,61 +169,102 @@ li:hover {
 }
 
 /* PRODUCT */
+
 main {
 	display: flex;
 	align-items: center;
 	margin-top: 60px;
 }
 
-/* PRODUCT IMAGES */
-#product-images {
-	width: 50vw;
+.container {
+	width: 40vw;
 	margin-right: 50px;
 }
 
-#main-image {
+.main-contain {
 	display: flex;
 	justify-content: flex-end;
-	margin-right: 20px;
+	
 }
 
-.full-images {
-	height: 340px;
+/* Hide the images by default */
+.mySlides {
+    display: none;
+    height: 340px;
 	width: 340px;
-	display: none;
+	padding-right: 10px;
 }
 
-#main-1 {
-	display: block;
-}
-
-#prod-img {
+.main-images {
 	height: 100%;
 	width: 100%;
 	border-radius: 10px;
-	margin-right: 10px;
-	margin-left: 10px;
 }
 
-#all-thumbs {
+.thumb-contain {
 	display: flex;
 	justify-content: flex-end;
 }
 
-#image-1, #image-2, #image-3, #image-4 {
+.thumbnail {
 	margin: 20px 10px;
 	height: 70px;
 	width: 70px;
 	border-radius: 10px;
 }
 
-#image-1:hover, #image-2:hover, #image-3:hover, #image-4:hover {
-	opacity: 0.5;
+/* Add a pointer when hovering over the thumbnail images */
+
+
+/* Next & previous buttons */
+.prev,
+.next {
+	display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.thumb-contain:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Six columns side by side */
+.thumb {
+    display: flex;
+	justify-content: flex-end;
+}
+
+.active,
+.thumbnail:hover {
+    opacity: 0.5;
 	cursor: pointer;
 }
 
-#image-1:active, #image-2:active, #image-3:active, #image-4:active {
-	opacity: 0.5;
+.active {
 	box-sizing: border-box;
 	border-style: solid;
 	border-width: thin;
@@ -231,14 +272,9 @@ main {
 	color: hsl(26, 100%, 55%);
 	cursor: pointer;
 }
-
-#previous, #next {
-	display: none;
-}
-
 /* PRODUCT DESCRIPTION */
 #product-info {
-	width: 50vw;
+	width: 60vw;
 	padding-right: 100px;
 	margin-left: 50px;
 }
