@@ -71,39 +71,41 @@
   </div>
   <!-- LIGHTBOX MODAL -->
   <div class="modal lightbox">
+	  <div class="lb-parent">
+	  <div id="lb-content">
       <div class="lb-container" id="lb-contain">
-              
-              <!-- NEXT AND PREVIOUS BUTTONS -->
-              <div id="lb-prev-img" onclick="lbPlusSlides(-1)">
-                  <button id="lb-prev-chev">
-                      <img src="static/images/icon-previous.svg" alt="prev" id="lb-previous">
-                  </button>
+            <div id="lb-im-chev">
+                  <div id="lb-prev-img" onclick="lbPlusSlides(-1)">
+                          <button id="lb-prev-chev">
+                              <img src="static/images/icon-previous.svg" alt="prev" id="lb-previous">
+                          </button>
+                      </div>
+                      <div id="lb-next-img" onclick="lbPlusSlides(1)">
+                          <button id="lb-next-chev">
+                              <img src="static/images/icon-next.svg" alt="next" id="lb-next">
+                          </button>
+                      </div>
+                  <!-- FULL SIZE IMAGES -->
+                  <div class="lb-mainim-contain">
+                      <!-- NEXT AND PREVIOUS BUTTONS -->
+                      <div class="lb-mySlides">
+                          <img class="lb-main-images" src="static/images/image-product-1.jpg" alt="main1">
+                      </div>
+
+                      <div class="lb-mySlides">
+                          <img class="lb-main-images image234" src="static/images/image-product-2.jpg" alt="main2">
+                      </div>
+
+                      <div class="lb-mySlides">
+                          <img class="lb-main-images image234" src="static/images/image-product-3.jpg" alt="main3">
+                      </div>
+
+                      <div class="lb-mySlides">
+                          <img class="lb-main-images image234" src="static/images/image-product-4.jpg" alt="main4">
+                      </div>
+                  </div>
               </div>
-              <div id="lb-next-img" onclick="lbPlusSlides(1)">
-                  <button id="lb-next-chev">
-                      <img src="static/images/icon-next.svg" alt="next" id="lb-next">
-                  </button>
               </div>
-
-              <!-- FULL SIZE IMAGES -->
-              <div class="lb-mainim-contain">
-                  <div class="lb-mySlides">
-                      <img class="lb-main-images" src="static/images/image-product-1.jpg" alt="main1">
-                  </div>
-
-                  <div class="lb-mySlides">
-                      <img class="lb-main-images image234" src="static/images/image-product-2.jpg" alt="main2">
-                  </div>
-
-                  <div class="lb-mySlides">
-                      <img class="lb-main-images image234" src="static/images/image-product-3.jpg" alt="main3">
-                  </div>
-
-                  <div class="lb-mySlides">
-                      <img class="lb-main-images image234" src="static/images/image-product-4.jpg" alt="main4">
-                  </div>
-              </div>
-
               <!-- THUMBNAILS -->
               <div class="lb-thumb-contain">
                   <div class="lb-thumb">
@@ -120,6 +122,7 @@
                   </div>
               </div>
           </div>
+		  </div>
   </div>
   <main>
       <!--IMAGES-->

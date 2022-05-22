@@ -143,15 +143,33 @@ li:hover {
     height: 100%; /* Full height */
     background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
 }
+
+#lb-parent {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#lb-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
 #lb-contain {
+	height: 520px;
+	width: 470px;
     z-index: 1; /* Sit on top */
     overflow: auto; /* Enable scroll if needed */
-	margin-top: 150px;
+	margin: auto;
 }
 
 .lb-mainim-contain {
 	display: flex;
 	justify-content: center;
+	padding-left: 10px;
 }
 
 .lb-mySlides {
@@ -170,10 +188,13 @@ li:hover {
 /* LIGHTBOX PREVIOUS & NEXT ARROWS */
 #lb-prev-img {
     display: block;
-    height: 340px;
+    height: 400px;
     width: 70px;
     position: absolute;
-    top: 110px;
+	margin-left: -30px;
+    top: 150px;
+	justify-content: flex-start;
+	
 }
 
 #lb-prev-chev {
@@ -217,11 +238,10 @@ li:hover {
 
 #lb-next-img {
     display: block;
-    height: 340px;
+    height: 400px;
     width: 70px;
     position: absolute;
-    top: 110px;
-    right: 0px;
+    top: 150px;
 }
 
 #lb-next {
@@ -233,6 +253,8 @@ li:hover {
     width: 9px;
 }
 
+
+/* LIGHTBOX THUMBNAIL */
 .lb-thumbnail {
 	margin: 20px 10px;
 	height: 70px;
