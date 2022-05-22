@@ -201,6 +201,10 @@ main {
 	border-radius: 10px;
 }
 
+#prev-img, #next-image, #prev-chev, #next-chev {
+	display: none;
+}
+
 .thumb-contain {
 	display: flex;
 	justify-content: flex-end;
@@ -211,39 +215,6 @@ main {
 	height: 70px;
 	width: 70px;
 	border-radius: 10px;
-}
-
-/* Add a pointer when hovering over the thumbnail images */
-
-
-/* Next & previous buttons */
-.prev,
-.next {
-	display: none;
-    cursor: pointer;
-    position: absolute;
-    top: 40%;
-    width: auto;
-    padding: 16px;
-    margin-top: -50px;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    -webkit-user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .thumb-contain:after {
@@ -338,6 +309,10 @@ h1 {
 #quantity {
 	font-weight: 700;
 	padding: 0px 25px;
+}
+
+.cart-btn {
+	background-color: hsl(223, 64%, 98%);
 }
 
 #remove {
@@ -441,23 +416,38 @@ h1 {
 	}
 	
 	/* PRODUCT IMAGES */
-	#main-image {
+	.container {
+		width: 100%;
 		margin: 0px;
+	}
+	
+	.main-contain {
 		justify-content: center;
 	}
 	
-	.full-images {
+	.mySlides {
+		padding: 0px;
+		height: 280px;
 		width: 375px;
 	}
 	
-	#prod-img, #mobile-1, #mobile-2, #mobile-3, #mobile-4 {
-		height: 340px;
-		width: 375px;
+	.main-images {
+		object-fit: cover;
 		border-radius: 0px;
-		margin: 0px;
 	}
 	
+	.image234 {
+		object-position: top;
+	}
+	
+	.thumb-contain {
+		display: none;
+	}
+	
+	
+	/* PREVIOUS & NEXT ARROWS */
 	#prev-img {
+		display: block;
 		height: 340px;
 		width: 70px;
 		position: absolute;
@@ -467,7 +457,7 @@ h1 {
 	#prev-chev {
 		display: block;
 		position: absolute;
-		top: 150px;
+		top: 120px;
 		height: 35px;
 		width: 35px;
 		background-color: white;
@@ -495,12 +485,21 @@ h1 {
 	#next-chev {
 		display: block;
 		position: absolute;
-		top: 230px;
+		top: 120px;
 		height: 35px;
 		width: 35px;
 		background-color: white;
 		border-radius: 30px;
-		margin-left: 330px;
+		margin-left: 20px;
+	}
+	
+	#next-img {
+		display: block;
+		height: 340px;
+		width: 70px;
+		position: absolute;
+		top: 110px;
+		right: 0px;
 	}
 	
 	#next {
@@ -510,16 +509,6 @@ h1 {
 		top: 11px;
 		height: 12px;
 		width: 9px;
-	}
-	
-	#product-images {
-		padding: 0px;
-		width: 375px;
-		margin: 0px;
-	}
-	
-	#all-thumbs {
-		display: none;
 	}
 	
 	/* PRODUCT DESCRIPTION*/
