@@ -71,58 +71,65 @@
   </div>
   <!-- LIGHTBOX MODAL -->
   <div class="modal lightbox">
-	  <div class="lb-parent">
 	  <div id="lb-content">
-      <div class="lb-container" id="lb-contain">
-            <div id="lb-im-chev">
-                  <div id="lb-prev-img" onclick="lbPlusSlides(-1)">
+            <div class="lb-container" id="lb-contain">
+				<p id="lb-close">&times;</p>
+                <div id="lb-im-chev">
+                      <div id="lb-prev-img" onclick="lbPlusSlides(-1)">
                           <button id="lb-prev-chev">
-                              <img src="static/images/icon-previous.svg" alt="prev" id="lb-previous">
+							  <p alt="prev" id="lb-previous">&lt;</p>
                           </button>
                       </div>
                       <div id="lb-next-img" onclick="lbPlusSlides(1)">
                           <button id="lb-next-chev">
-                              <img src="static/images/icon-next.svg" alt="next" id="lb-next">
+							  <p alt="next" id="lb-next">&gt;</p>
                           </button>
                       </div>
-                  <!-- FULL SIZE IMAGES -->
-                  <div class="lb-mainim-contain">
-                      <!-- NEXT AND PREVIOUS BUTTONS -->
-                      <div class="lb-mySlides">
-                          <img class="lb-main-images" src="static/images/image-product-1.jpg" alt="main1">
-                      </div>
-
-                      <div class="lb-mySlides">
-                          <img class="lb-main-images image234" src="static/images/image-product-2.jpg" alt="main2">
-                      </div>
-
-                      <div class="lb-mySlides">
-                          <img class="lb-main-images image234" src="static/images/image-product-3.jpg" alt="main3">
-                      </div>
-
-                      <div class="lb-mySlides">
-                          <img class="lb-main-images image234" src="static/images/image-product-4.jpg" alt="main4">
-                      </div>
                   </div>
-              </div>
+                      <!-- FULL SIZE IMAGES -->
+                      <div class="lb-mainim-contain">
+                          <!-- NEXT AND PREVIOUS BUTTONS -->
+                          <div class="lb-mySlides">
+                              <img class="lb-main-images" src="static/images/image-product-1.jpg" alt="main1">
+                          </div>
+
+                          <div class="lb-mySlides">
+                              <img class="lb-main-images image234" src="static/images/image-product-2.jpg" alt="main2">
+                          </div>
+
+                          <div class="lb-mySlides">
+                              <img class="lb-main-images image234" src="static/images/image-product-3.jpg" alt="main3">
+                          </div>
+
+                          <div class="lb-mySlides">
+                              <img class="lb-main-images image234" src="static/images/image-product-4.jpg" alt="main4">
+                          </div>
+                      </div>
               </div>
               <!-- THUMBNAILS -->
               <div class="lb-thumb-contain">
                   <div class="lb-thumb">
-                      <img class="lb-thumbnail" src="static/images/image-product-1-thumbnail.jpg" onclick="lbCurrentSlide(1)" alt="thumb1">
+					  <div class="thumb-hover">
+                          <img class="lb-thumbnail" src="static/images/image-product-1-thumbnail.jpg" onclick="lbCurrentSlide(1)" alt="thumb1">
+                      </div>
                   </div>
                   <div class="thumb">
-                      <img class="lb-thumbnail" src="static/images/image-product-2-thumbnail.jpg" onclick="lbCurrentSlide(2)" alt="thumb2">
+					  <div class="thumb-hover">
+                          <img class="lb-thumbnail" src="static/images/image-product-2-thumbnail.jpg" onclick="lbCurrentSlide(2)" alt="thumb2">
+                      </div>
                   </div>
                   <div class="thumb">
-                      <img class="lb-thumbnail" src="static/images/image-product-3-thumbnail.jpg" onclick="lbCurrentSlide(3)" alt="thumb3">
+					  <div class="thumb-hover">
+                          <img class="lb-thumbnail" src="static/images/image-product-3-thumbnail.jpg" onclick="lbCurrentSlide(3)" alt="thumb3">
+                      </div>
                   </div>
                   <div class="thumb">
-                      <img class="lb-thumbnail" src="static/images/image-product-4-thumbnail.jpg" onclick="lbCurrentSlide(4)" alt="thumb4s">
+					  <div class="thumb-hover">
+                          <img class="lb-thumbnail" src="static/images/image-product-4-thumbnail.jpg" onclick="lbCurrentSlide(4)" alt="thumb4s">
+                      </div>
                   </div>
               </div>
-          </div>
-		  </div>
+        </div>
   </div>
   <main>
       <!--IMAGES-->

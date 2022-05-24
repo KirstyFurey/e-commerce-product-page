@@ -13,6 +13,13 @@ const modals = document.getElementsByClassName('modal');
   close.onclick = () => (modals[ind].style.display = 'none');
 });
 
+const closelb = document.getElementById('lb-close');
+const lightbox = document.getElementsByClassName('lightbox');
+
+closelb.onclick = () => {
+	lightbox.style.display = 'none';
+}
+
 //WORKS BY ADDING THE CLASS 'MODAL' TO THE CONTAINER ELEMENT HOLDING THE ELEMENT WITH THE MODAL CONTENT, AND SETTING THIS TO THE FULL SIZE OF THE PAGE, SO CLICKING ANYWHERE OUTSIDE OF THE ELEMENT WITH THE MODAL CONTENT IS CLICKING ON THE ELEMENT WITH THE CLASS OF MODAL
 window.onclick = (e) => {
   [...modals].forEach((modals) => {
