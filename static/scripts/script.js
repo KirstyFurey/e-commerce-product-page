@@ -102,4 +102,34 @@ function removeQty() {
 	
 }
 
+const addToCart = document.getElementById("add-to-cart");
+
+function addCart() {
+	if (qClick >= 1) {
+		qClick = 0;
+		qty.innerHTML = qClick;
+		updateCart();
+	}
+}
+
+//POPULATE THE CART WITH PRODUCT PAGE INFO - DONE THIS WAY AS ON A REAL SITE WITH MULTIPLE PAGES THE CART INFO NEEDS TO POPULATE DYNAMICALLY WITH MULTIPLE PRODUCTS
+function updateCart() {
+	let emptyMsg = document.getElementById("empty-msg");
+	emptyMsg.style.display = "none";
+	let cartCreateProd = document.createElement("div");
+	cartCreateProd.setAttribute("id", "added");
+	const getCart = document.getElementById("cart-cont");
+	getCart.appendChild(cartCreateProd);
+    cartCreateProd.style.margin = ('10px');
+	let cartIm = document.createElement("img");
+	cartCreateProd.appendChild(cartIm);
+	cartIm.setAttribute("src", "static/images/image-product-1-thumbnail.jpg");
+    cartIm.setAttribute("height", "40");
+    cartIm.setAttribute("width", "40");
+    cartIm.setAttribute("alt", "cart image");
+    cartIm.style.borderRadius = ('3px');
+}
+
+
+
 
