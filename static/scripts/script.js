@@ -83,8 +83,23 @@ function showSlides(n) {
   thumb[slideIndex-1].className += " active";
 }
 
+//INCREMENT THE COUNTER ON ADD / REMOVE CLICK
+const qty = document.getElementById("quantity");
+let qClick = 0;
 
+function addQty() {
+	qClick +=1;
+	qty.innerHTML = qClick;
+}
 
-
+function removeQty() {
+	if (qClick === 0) {
+		return
+    } else {
+		qClick -=1;
+		qty.innerHTML = qClick;
+		}
+	
+}
 
 

@@ -532,7 +532,7 @@ h1 {
 }
 
 /* MOBILE */
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 900px) {
 	
 	/* NAV */
 	nav {

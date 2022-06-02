@@ -213,9 +213,9 @@
           <!-- CART -->
           <div id="cart-option">
               <div id="add-remove">
-                  <button class="cart-btn"><span id="remove"><img src="static/images/icon-minus.svg" alt="remove" id="remove-icon"></span></button>
+                  <button class="cart-btn"><span id="remove" onClick="removeQty()"><img src="static/images/icon-minus.svg" alt="remove" id="remove-icon"></span></button>
                   <span id="quantity">0</span>
-                  <button class="cart-btn"><span id="add"><img src ="static/images/icon-plus.svg" alt="add"></span></button>
+                  <button class="cart-btn" onClick="addQty()"><span id="add"><img src ="static/images/icon-plus.svg" alt="add"></span></button>
               </div>
               <button id="add-to-cart">
                   <span id="add-cart-logo">
