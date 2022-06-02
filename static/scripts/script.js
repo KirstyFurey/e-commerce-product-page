@@ -120,14 +120,18 @@ function updateCart() {
 	cartCreateProd.setAttribute("id", "added");
 	const getCart = document.getElementById("cart-cont");
 	getCart.appendChild(cartCreateProd);
-    cartCreateProd.style.margin = ('10px');
+    cartCreateProd.style.margin = ('20px');
 	let cartIm = document.createElement("img");
 	cartCreateProd.appendChild(cartIm);
 	cartIm.setAttribute("src", "static/images/image-product-1-thumbnail.jpg");
-    cartIm.setAttribute("height", "40");
-    cartIm.setAttribute("width", "40");
+    cartIm.setAttribute("height", "50");
+    cartIm.setAttribute("width", "50");
     cartIm.setAttribute("alt", "cart image");
     cartIm.style.borderRadius = ('3px');
+	let getTitle = document.getElementById("prod-title");
+	let title = document.createElement("span");
+	cartCreateProd.appendChild(title);
+	title.innerHTML = getTitle.innerHTML;
 }
 
 
