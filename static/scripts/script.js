@@ -106,14 +106,15 @@ const addToCart = document.getElementById("add-to-cart");
 
 function addCart() {
 	if (qClick >= 1) {
+		updateCart();
 		qClick = 0;
 		qty.innerHTML = qClick;
-		updateCart();
 	}
 }
 
 //POPULATE THE CART WITH PRODUCT PAGE INFO - DONE THIS WAY AS ON A REAL SITE WITH MULTIPLE PAGES THE CART INFO NEEDS TO POPULATE DYNAMICALLY WITH MULTIPLE PRODUCTS
 function updateCart() {
+	// CREATE THE DIV TO HOLD CART INFO. APPEND TO CART MODAL
 	let emptyMsg = document.getElementById("empty-msg");
 	emptyMsg.style.display = "none";
 	let cartCreateProd = document.createElement("div");
@@ -121,6 +122,7 @@ function updateCart() {
 	const getCart = document.getElementById("cart-cont");
 	getCart.appendChild(cartCreateProd);
     cartCreateProd.style.margin = ('20px');
+	// CREATE AND APPEND THE PRODUCT THUMBNAIL
 	let cartIm = document.createElement("img");
 	cartCreateProd.appendChild(cartIm);
 	cartIm.setAttribute("src", "static/images/image-product-1-thumbnail.jpg");
@@ -128,10 +130,23 @@ function updateCart() {
     cartIm.setAttribute("width", "50");
     cartIm.setAttribute("alt", "cart image");
     cartIm.style.borderRadius = ('3px');
+	// CREATE AND APPEND SPAN FOR THE PRODUCT TITLE
 	let getTitle = document.getElementById("prod-title");
 	let title = document.createElement("span");
 	cartCreateProd.appendChild(title);
 	title.innerHTML = getTitle.innerHTML;
+	// CREATE AND APPEND THE PRODUCT PRICE
+	let getPrice = document.getElementById("price");
+	let cartPrice = document.createElement("span");
+	cartCreateProd.appendChild(cartPrice);
+	cartPrice.innerHTML = getPrice.innerHTML;
+	let prodQty = document.createElement("span");
+	cartCreateProd.appendChild(prodQty);
+	prodQty.innerHTML = "x " + qClick;
+	// CREATE AND APPEND THE BIN ICON
+	let bin = document.createElement("img");
+	bin.setAttribute("src", "static/images/icon-delete.svg");
+	cartCreateProd.appendChild(bin);
 }
 
 
