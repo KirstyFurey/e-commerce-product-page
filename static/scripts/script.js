@@ -118,9 +118,15 @@ const addToCart = document.getElementById("add-to-cart");
 
 function addCart() {
 	if (qClick >= 1) {
+		if (document.getElementById("added")) {
+			let newQty = document.getElementById("cart-qty").innerHTML;
+			console.log(newQty);
+			newQty.innerHTML = newQty + qClick;
+		} else {
 		updateCart();
 		qClick = 0;
 		qty.innerHTML = qClick;
+		}
 	}
 }
 
@@ -154,11 +160,12 @@ function updateCart() {
 	let getPrice = document.getElementById("price");
 	let cartPrice = document.createElement("span");
 	cartCreateProd.appendChild(cartPrice);
-	cartPrice.innerHTML = getPrice.innerHTML;
+	cartPrice.innerHTML = getPrice.innerHTML + " x";
 	// CREATE AND APPEND ITEM QUANTITY
 	let prodQty = document.createElement("span");
+	prodQty.setAttribute("id", "cart-qty");
 	cartCreateProd.appendChild(prodQty);
-	prodQty.innerHTML = "x " + qClick;
+	prodQty.innerHTML = qClick;
 	// CREATE AND APPEND TOTAL BASKET PRICE
 	let totalPrice = document.createElement("span");
 	cartCreateProd.appendChild(totalPrice);
