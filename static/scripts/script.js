@@ -1,5 +1,17 @@
 // JavaScript Document
 
+// ARRAY FOR PRODUCT PRICES - AS THOUGH IT WERE A FULL CATALOGUE - SO THE CART CAN ACCESS THESE DYNAMICALLY
+const prices = [
+	{
+		name: 'Fall Limited Edition Sneakers',
+		price: 125,
+	},
+	{
+		name: 'Summer Limited Edition Sneakers',
+		price: 250,
+	}
+]
+
 //OPEN AND CLOSE MULTIPLE MODALS
 const btns = document.getElementsByClassName('btn');
 const close = document.getElementsByClassName('close');
@@ -135,14 +147,23 @@ function updateCart() {
 	let title = document.createElement("span");
 	cartCreateProd.appendChild(title);
 	title.innerHTML = getTitle.innerHTML;
+	// ADD BREAK
+	let br = document.createElement("br");
+	cartCreateProd.appendChild(br);
 	// CREATE AND APPEND THE PRODUCT PRICE
 	let getPrice = document.getElementById("price");
 	let cartPrice = document.createElement("span");
 	cartCreateProd.appendChild(cartPrice);
 	cartPrice.innerHTML = getPrice.innerHTML;
+	// CREATE AND APPEND ITEM QUANTITY
 	let prodQty = document.createElement("span");
 	cartCreateProd.appendChild(prodQty);
 	prodQty.innerHTML = "x " + qClick;
+	// CREATE AND APPEND TOTAL BASKET PRICE
+	let totalPrice = document.createElement("span");
+	cartCreateProd.appendChild(totalPrice);
+	totalPrice.innerHTML = " $" + prices[0].price * qClick;
+	totalPrice.style.fontWeight = "700";
 	// CREATE AND APPEND THE BIN ICON
 	let bin = document.createElement("img");
 	bin.setAttribute("src", "static/images/icon-delete.svg");
