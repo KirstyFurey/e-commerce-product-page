@@ -120,8 +120,12 @@ function addCart() {
 	if (qClick >= 1) {
 		if (document.getElementById("added")) {
 			let newQty = document.getElementById("cart-qty").innerHTML;
-			console.log(newQty);
-			newQty.innerHTML = newQty + qClick;
+			let addQty = document.getElementById("cart-qty");
+			addQty.innerHTML = +newQty + +qClick;
+			let newPrice = document.getElementById("new-price");
+			newPrice.innerHTML = " $" + prices[0].price * +addQty.innerHTML;
+			qClick = 0;
+			qty.innerHTML = qClick;
 		} else {
 		updateCart();
 		qClick = 0;
@@ -149,10 +153,9 @@ function updateCart() {
     cartIm.setAttribute("alt", "cart image");
     cartIm.style.borderRadius = ('3px');
 	// CREATE AND APPEND SPAN FOR THE PRODUCT TITLE
-	let getTitle = document.getElementById("prod-title");
 	let title = document.createElement("span");
 	cartCreateProd.appendChild(title);
-	title.innerHTML = getTitle.innerHTML;
+	title.innerHTML = prices[0].name;
 	// ADD BREAK
 	let br = document.createElement("br");
 	cartCreateProd.appendChild(br);
@@ -168,6 +171,7 @@ function updateCart() {
 	prodQty.innerHTML = qClick;
 	// CREATE AND APPEND TOTAL BASKET PRICE
 	let totalPrice = document.createElement("span");
+	totalPrice.setAttribute("id", "new-price");
 	cartCreateProd.appendChild(totalPrice);
 	totalPrice.innerHTML = " $" + prices[0].price * qClick;
 	totalPrice.style.fontWeight = "700";
