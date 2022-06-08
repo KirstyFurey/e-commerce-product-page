@@ -140,6 +140,7 @@ function updateCart() {
 	let emptyMsg = document.getElementById("empty-msg");
 	emptyMsg.style.display = "none";
 	let cartCreateProd = document.createElement("div");
+	cartCreateProd.setAttribute("id", "cart-prod");
 	cartCreateProd.setAttribute("id", "added");
 	const getCart = document.getElementById("cart-cont");
 	getCart.appendChild(cartCreateProd);
@@ -176,10 +177,35 @@ function updateCart() {
 	totalPrice.innerHTML = " $" + prices[0].price * qClick;
 	totalPrice.style.fontWeight = "700";
 	// CREATE AND APPEND THE BIN ICON
-	let bin = document.createElement("img");
-	bin.setAttribute("src", "static/images/icon-delete.svg");
-	cartCreateProd.appendChild(bin);
+	//let bin = document.createElement("img");
+	//bin.setAttribute("id", "empty");
+	//bin.setAttribute("src", "static/images/icon-delete.svg");
+	//cartCreateProd.appendChild(bin);
+	empty.style.display = "block";
+	cartCreateProd.appendChild(empty);
 }
+
+	// EMPTY THE CART AND RESET ALL VALUES
+const empty = document.getElementById("empty");
+
+empty.onclick = () => {
+        let emptyCart = document.getElementById("added");
+        if (confirm("Are you sure you want to remove this item from your basket?")) {
+			emptyCart.remove();
+            let emptyMsg = document.getElementById("empty-msg");
+            emptyMsg.style.display = "block";
+		} else {
+            return;
+	}
+	
+}
+
+
+
+
+
+
+
 
 
 

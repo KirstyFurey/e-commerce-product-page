@@ -337,6 +337,10 @@ li:hover {
     line-height: 130px;
 }
 
+#empty {
+	display: none;
+}
+
 /* PRODUCT */
 
 main {
