@@ -136,15 +136,18 @@ function addCart() {
 
 //POPULATE THE CART WITH PRODUCT PAGE INFO - DONE THIS WAY AS ON A REAL SITE WITH MULTIPLE PAGES THE CART INFO NEEDS TO POPULATE DYNAMICALLY WITH MULTIPLE PRODUCTS
 function updateCart() {
-	// CREATE THE DIV TO HOLD CART INFO. APPEND TO CART MODAL
+	// HIDE THE CART EMPTY MESSAGE
 	let emptyMsg = document.getElementById("empty-msg");
 	emptyMsg.style.display = "none";
+	// CREATE THE DIV TO HOLD CART INFO. APPEND TO CART MODAL
 	let cartCreateProd = document.createElement("div");
-	cartCreateProd.setAttribute("id", "cart-prod");
 	cartCreateProd.setAttribute("id", "added");
 	const getCart = document.getElementById("cart-cont");
 	getCart.appendChild(cartCreateProd);
     cartCreateProd.style.margin = ('20px');
+	cartCreateProd.style.display = "flex";
+	cartCreateProd.style.justifyContent = "space-between";
+	cartCreateProd.style.alignItems = "center";
 	// CREATE AND APPEND THE PRODUCT THUMBNAIL
 	let cartIm = document.createElement("img");
 	cartCreateProd.appendChild(cartIm);
@@ -153,29 +156,42 @@ function updateCart() {
     cartIm.setAttribute("width", "50");
     cartIm.setAttribute("alt", "cart image");
     cartIm.style.borderRadius = ('3px');
-	// CREATE AND APPEND SPAN FOR THE PRODUCT TITLE
-	let title = document.createElement("span");
-	cartCreateProd.appendChild(title);
+	// CREATE DIV TO HOUSE PRODUCT INFO PRICE & QUANTITY, APPEND TO CART MODAL
+	let cartContainer = document.createElement("div");
+	cartContainer.setAttribute("id", "cart-container");
+	cartCreateProd.appendChild(cartContainer);
+	cartContainer.style.height = "45px";
+	cartContainer.style.width = "160px";
+	cartContainer.style.marginRight = "40px";
+	cartContainer.style.color = "hsl(219, 9%, 45%)";
+	// CREATE AND APPEND DIV FOR THE PRODUCT TITLE
+	let title = document.createElement("div");
+	cartContainer.appendChild(title);
 	title.innerHTML = prices[0].name;
-	// ADD BREAK
-	let br = document.createElement("br");
-	cartCreateProd.appendChild(br);
+	title.style.overflow = "hidden";
+	title.style.whiteSpace = "nowrap";
+	title.style.textOverflow = "ellipsis"
+	// ADD DIV TO HOUSE PRICE AND QUANTITY
+	let cartPriceCont = document.createElement("div");
+	cartPriceCont.setAttribute("id", "price-container");
+	cartContainer.appendChild(cartPriceCont);
 	// CREATE AND APPEND THE PRODUCT PRICE
 	let getPrice = document.getElementById("price");
 	let cartPrice = document.createElement("span");
-	cartCreateProd.appendChild(cartPrice);
+	cartPriceCont.appendChild(cartPrice);
 	cartPrice.innerHTML = getPrice.innerHTML + " x";
 	// CREATE AND APPEND ITEM QUANTITY
 	let prodQty = document.createElement("span");
 	prodQty.setAttribute("id", "cart-qty");
-	cartCreateProd.appendChild(prodQty);
+	cartPriceCont.appendChild(prodQty);
 	prodQty.innerHTML = qClick;
 	// CREATE AND APPEND TOTAL BASKET PRICE
 	let totalPrice = document.createElement("span");
 	totalPrice.setAttribute("id", "new-price");
-	cartCreateProd.appendChild(totalPrice);
+	cartPriceCont.appendChild(totalPrice);
 	totalPrice.innerHTML = " $" + prices[0].price * qClick;
 	totalPrice.style.fontWeight = "700";
+	totalPrice.style.color = "black";
 	// CREATE AND APPEND THE BIN ICON
 	//let bin = document.createElement("img");
 	//bin.setAttribute("id", "empty");
