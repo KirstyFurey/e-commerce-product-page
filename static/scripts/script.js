@@ -115,6 +115,7 @@ function removeQty() {
 }
 
 const addToCart = document.getElementById("add-to-cart");
+const cartRoundal = document.getElementById("cart-roundal");
 
 function addCart() {
 	if (qClick >= 1) {
@@ -122,6 +123,7 @@ function addCart() {
 			let newQty = document.getElementById("cart-qty").innerHTML;
 			let addQty = document.getElementById("cart-qty");
 			addQty.innerHTML = +newQty + +qClick;
+			cartRoundal.innerHTML = +newQty + +qClick;
 			let newPrice = document.getElementById("new-price");
 			newPrice.innerHTML = " $" + prices[0].price * +addQty.innerHTML;
 			qClick = 0;
@@ -192,16 +194,13 @@ function updateCart() {
 	totalPrice.innerHTML = " $" + prices[0].price * qClick;
 	totalPrice.style.fontWeight = "700";
 	totalPrice.style.color = "black";
-	// CREATE AND APPEND THE BIN ICON
-	//let bin = document.createElement("img");
-	//bin.setAttribute("id", "empty");
-	//bin.setAttribute("src", "static/images/icon-delete.svg");
-	//cartCreateProd.appendChild(bin);
 	empty.style.display = "block";
 	cartCreateProd.appendChild(empty);
+	cartRoundal.style.display = "block";
+	cartRoundal.innerHTML = qClick;
 }
 
-	// EMPTY THE CART AND RESET ALL VALUES
+// EMPTY THE CART AND RESET ALL VALUES
 const empty = document.getElementById("empty");
 
 empty.onclick = () => {
@@ -210,13 +209,13 @@ empty.onclick = () => {
 			emptyCart.remove();
             let emptyMsg = document.getElementById("empty-msg");
             emptyMsg.style.display = "block";
+			cartRoundal.innerHTML = "";
+			cartRoundal.style.display = "none";
 		} else {
             return;
 	}
 	
 }
-
-
 
 
 
