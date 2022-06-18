@@ -3,6 +3,8 @@
 
 /* ALL SECTIONS */
 body {
+  margin: 0px;
+  padding: 0px;
   font-family: "Kumbh Sans", sans-serif;
   font-weight: 400;
   font-size: 14px;
