@@ -52,6 +52,7 @@ button {
   color: black;
   text-decoration: none;
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 /* NAV */
@@ -98,6 +99,7 @@ li:hover {
   border-bottom-style: solid;
   border-bottom-color: hsl(26, 100%, 55%);
   border-bottom-width: thick;
+  transition: all 0.2s ease;
 }
 
 #nav-cart-logo {
@@ -112,6 +114,7 @@ li:hover {
 #nav-cart-icon:hover {
   color: black;
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 #cart-roundal {
@@ -146,6 +149,7 @@ li:hover {
   border-radius: 20px;
   color: hsl(26, 100%, 55%);
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 /* LIGHTBOX MODAL */
@@ -208,6 +212,7 @@ li:hover {
 
 #lb-close:hover {
   color: hsl(26, 100%, 55%);
+  transition: all 0.2s ease;
 }
 
 /* LIGHTBOX PREVIOUS & NEXT ARROWS */
@@ -239,10 +244,12 @@ li:hover {
 #lb-previous:hover, #lb-next:hover {
   cursor: pointer;
   color: hsl(26, 100%, 55%);
+  transition: all 0.2s ease;
 }
 
 #lb-prev-chev:hover, #lb-next-chev:hover {
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 #lb-next-chev {
@@ -298,6 +305,7 @@ li:hover {
 .lb-thumbnail:hover {
   opacity: 0.5;
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .active {
@@ -307,6 +315,7 @@ li:hover {
   border-radius: 10px;
   color: hsl(26, 100%, 55%);
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .thumb-hover {
@@ -315,6 +324,7 @@ li:hover {
   width: 70px;
   border-radius: 10px;
   background-color: white;
+  transition: all 0.2s ease;
 }
 
 /*CART MODAL*/
@@ -361,6 +371,7 @@ li:hover {
 
 #empty:hover {
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 /* PRODUCT */
@@ -428,6 +439,7 @@ main {
 .thumbnail:hover {
   opacity: 0.5;
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .active {
@@ -437,6 +449,7 @@ main {
   border-radius: 10px;
   color: hsl(26, 100%, 55%);
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 /* PRODUCT DESCRIPTION */
 #product-info {
@@ -525,6 +538,7 @@ h1 {
 
 #remove:hover, #add:hover {
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 #cart-logo {
@@ -544,6 +558,7 @@ h1 {
 #add-to-cart:hover {
   opacity: 0.65;
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 /* FOOTER */
@@ -572,6 +587,7 @@ h1 {
 
   #mobile-menu:hover {
     cursor: pointer;
+    transition: all 0.2s ease;
   }
 
   #desktop-nav {
@@ -594,6 +610,7 @@ h1 {
     cursor: pointer;
     box-sizing: none;
     border: none;
+    transition: all 0.2s ease;
   }
 
 
@@ -675,10 +692,12 @@ h1 {
 
   #previous:hover, #next:hover {
     cursor: pointer;
+    transition: all 0.2s ease;
   }
 
   #prev-chev:hover, #next-chev:hover {
     cursor: pointer;
+    transition: all 0.2s ease;
   }
 
   #next-chev {

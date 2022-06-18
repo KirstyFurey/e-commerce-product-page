@@ -1,5 +1,9 @@
 // JavaScript Document
 
+// GLOBAL VARIABLES
+
+const empty = document.getElementById("empty"); // GET THE EMPTY CART ICON
+
 // ARRAY FOR PRODUCT PRICES - AS THOUGH IT WERE A FULL CATALOGUE - SO THE CART CAN ACCESS THESE DYNAMICALLY
 const prices = [
   {
@@ -26,7 +30,7 @@ const modals = document.getElementsByClassName('modal');
 });
 
 
-//WORKS BY ADDING THE CLASS 'MODAL' TO THE CONTAINER ELEMENT HOLDING THE ELEMENT WITH THE MODAL CONTENT, AND SETTING THIS TO THE FULL SIZE OF THE PAGE, SO CLICKING ANYWHERE OUTSIDE OF THE ELEMENT WITH THE MODAL CONTENT IS CLICKING ON THE ELEMENT WITH THE CLASS OF MODAL
+// WORKS BY ADDING THE CLASS 'MODAL' TO THE CONTAINER ELEMENT HOLDING THE ELEMENT WITH THE MODAL CONTENT, AND SETTING THIS TO THE FULL SIZE OF THE PAGE, SO CLICKING ANYWHERE OUTSIDE OF THE ELEMENT WITH THE MODAL CONTENT IS CLICKING ON THE ELEMENT WITH THE CLASS OF MODAL
 window.onclick = (e) => {
   [...modals].forEach((modals) => {
     if (e.target === modals) {
@@ -208,8 +212,6 @@ function updateCart() {
 }
 
 // EMPTY THE CART AND RESET ALL VALUES
-const empty = document.getElementById("empty");
-
 empty.onclick = () => {
   let emptyCart = document.getElementById("added");
   if (confirm("Are you sure you want to remove this item from your basket?")) {
