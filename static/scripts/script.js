@@ -109,7 +109,7 @@ function showSlides(n) {
 
 //INCREMENT THE COUNTER ON ADD / REMOVE CLICK
 const qty = document.getElementById("quantity");
-let qClick = 0;
+let qClick = 1;
 
 function addQty() {
   qClick +=1;
@@ -117,7 +117,7 @@ function addQty() {
 }
 
 function removeQty() {
-  if (qClick === 0) {
+  if (qClick === 1) {
     return
   } else {
     qClick -=1;
@@ -137,11 +137,11 @@ function addCart() {
       cartRoundal.innerHTML = +newQty + +qClick;
       let newPrice = document.getElementById("new-price");
       newPrice.innerHTML = " $" + prices[0].price * +addQty.innerHTML;
-      qClick = 0;
+      qClick = 1;
       qty.innerHTML = qClick;
     } else {
       updateCart();
-      qClick = 0;
+      qClick = 1;
       qty.innerHTML = qClick;
     }
   }
