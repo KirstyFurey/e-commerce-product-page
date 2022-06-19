@@ -381,11 +381,12 @@ li:hover {
 main {
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-top: 60px;
 }
 
 .container {
-  width: 40vw;
+  /*width: 40vw;*/
   margin-right: 50px;
 }
 
@@ -455,9 +456,10 @@ main {
 }
 /* PRODUCT DESCRIPTION */
 #product-info {
-  width: 60vw;
-  padding-right: 100px;
+  width: 40vw; /* changed down form 60 */
+  /*padding-right: 100px;*/
   margin-left: 50px;
+  justify-content: flex-start;
 }
 
 h6 {
@@ -509,7 +511,9 @@ h1 {
 
 #add-remove {
   display: flex;
-  align-items: center;
+  /*align-items: center;*/
+  width: 180px;
+  justify-content: space-between;
   padding: 16px 0px;
   background-color: hsl(223, 64%, 98%);
   border-radius: 12px;

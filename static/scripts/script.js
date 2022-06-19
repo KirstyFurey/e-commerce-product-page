@@ -1,9 +1,5 @@
 // JavaScript Document
 
-// GLOBAL VARIABLES
-
-const empty = document.getElementById("empty"); // GET THE EMPTY CART ICON
-
 // ARRAY FOR PRODUCT PRICES - AS THOUGH IT WERE A FULL CATALOGUE - SO THE CART CAN ACCESS THESE DYNAMICALLY
 const prices = [
   {
@@ -15,6 +11,10 @@ const prices = [
     price: 250,
   }
 ]
+
+// GLOBAL VARIABLES
+
+const empty = document.getElementById("empty"); // GET THE EMPTY CART ICON
 
 //OPEN AND CLOSE MULTIPLE MODALS
 const btns = document.getElementsByClassName('btn');
@@ -110,13 +110,15 @@ function showSlides(n) {
 //INCREMENT THE COUNTER ON ADD / REMOVE CLICK
 const qty = document.getElementById("quantity");
 let qClick = 1;
+//const add = document.getElementById("add");
+//const remove = document.getElementById("remove");
 
 function addQty() {
   qClick +=1;
   qty.innerHTML = qClick;
 }
 
-function removeQty() {
+const removeQty = () => {
   if (qClick === 1) {
     return
   } else {
@@ -125,10 +127,18 @@ function removeQty() {
   }
 }
 
+/*add.onclick = () => {
+	addQty;
+}*/
+/*
+remove.onclick = () => {
+	removeQty;
+}*/
+
 const addToCart = document.getElementById("add-to-cart");
 const cartRoundal = document.getElementById("cart-roundal");
 
-function addCart() {
+const addCart = () => {
   if (qClick >= 1) {
     if (document.getElementById("added")) {
       let newQty = document.getElementById("cart-qty").innerHTML;
@@ -147,8 +157,12 @@ function addCart() {
   }
 }
 
+addToCart.onclick = () => {
+	addCart();
+}
+
 //POPULATE THE CART WITH PRODUCT PAGE INFO - DONE THIS WAY AS ON A REAL SITE WITH MULTIPLE PAGES THE CART INFO NEEDS TO POPULATE DYNAMICALLY WITH MULTIPLE PRODUCTS
-function updateCart() {
+const updateCart = () => {
   // HIDE THE CART EMPTY MESSAGE
   let emptyMsg = document.getElementById("empty-msg");
   emptyMsg.style.display = "none";
