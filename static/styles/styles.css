@@ -670,28 +670,27 @@ h1 {
 
   /* PREVIOUS & NEXT ARROWS */
   #prev-img {
-    display: block;
-    height: 340px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 280px;
     width: 70px;
     position: absolute;
     top: 0;
   }
 
   #prev-chev {
-    display: block;
-    position: absolute;
-    top: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 35px;
     width: 35px;
     background-color: white;
     border-radius: 30px;
-    margin-left: 10px;
   }
 
   #previous {
     display: block;
-    position: absolute;
-    margin-left: 8px;
     top: 11px;
     height: 12px;
     width: 9px;
@@ -708,19 +707,20 @@ h1 {
   }
 
   #next-chev {
-    display: block;
-    position: absolute;
-    top: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 35px;
     width: 35px;
     background-color: white;
     border-radius: 30px;
-    margin-left: 20px;
   }
 
   #next-img {
-    display: block;
-    height: 340px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 280px;
     width: 70px;
     position: absolute;
     top: 0;
@@ -729,8 +729,6 @@ h1 {
 
   #next {
     display: block;
-    position: absolute;
-    margin-left: 10px;
     top: 11px;
     height: 12px;
     width: 9px;
