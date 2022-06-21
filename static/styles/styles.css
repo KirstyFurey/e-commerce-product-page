@@ -608,12 +608,13 @@ h1 {
     padding: 0px 10px;
     font-weight: 700;
     padding-bottom: 15px;
+    height: 35px;
   }
 
   li:hover {
     color: hsl(220, 13%, 13%);
     cursor: pointer;
-    box-sizing: none;
+    box-shadow: none;
     border: none;
     transition: all 0.2s ease;
   }
@@ -639,6 +640,7 @@ h1 {
   .container {
     width: 100%;
     margin: 0px;
+    position: relative;
   }
 
   .main-contain {
@@ -672,7 +674,7 @@ h1 {
     height: 340px;
     width: 70px;
     position: absolute;
-    top: 110px;
+    top: 0;
   }
 
   #prev-chev {
@@ -721,7 +723,7 @@ h1 {
     height: 340px;
     width: 70px;
     position: absolute;
-    top: 110px;
+    top: 0;
     right: 0px;
   }
 
