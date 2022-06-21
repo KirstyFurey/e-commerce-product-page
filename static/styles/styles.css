@@ -510,10 +510,11 @@ h1 {
 
 #add-remove {
   display: flex;
-  /*align-items: center;*/
+  align-items: center;
   width: 180px;
+  height: 55px;
   justify-content: space-between;
-  padding: 16px 0px;
+  /*padding: 16px 0px;*/
   background-color: hsl(223, 64%, 98%);
   border-radius: 12px;
   margin-right: 20px;
@@ -553,7 +554,10 @@ h1 {
 #add-to-cart {
   display: flex;
   align-items: center;
-  padding: 15px 70px;
+  justify-content: center;
+  width: 280px;
+  height: 55px;
+  /*padding: 15px 70px;*/
   background-color: hsl(26, 100%, 55%);
   border-radius: 12px;
   color: white;
@@ -638,20 +642,21 @@ h1 {
 
   /* PRODUCT IMAGES */
   .container {
-    width: 100%;
+    width: 80vw;
+    height: auto;
     margin: 0px;
     position: relative;
   }
 
   .main-contain {
     justify-content: center;
+    pointer-events: none;
   }
 
   .mySlides {
     padding: 0px;
-    height: 280px;
-    width: 375px;
-    pointer-events: none;
+    width: 80vw;
+    height: auto;
   }
 
   .main-images {
@@ -673,10 +678,9 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 280px;
     width: 70px;
     position: absolute;
-    top: 0;
+    top: 50%;
   }
 
   #prev-chev {
@@ -720,10 +724,9 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 280px;
     width: 70px;
     position: absolute;
-    top: 0;
+    top: 50%;
     right: 0px;
   }
 
@@ -751,7 +754,7 @@ h1 {
   }
 
   #product-desc {
-    padding: 0px 20px;
+    padding: 0px 35px;
   }
 
 
@@ -763,8 +766,11 @@ h1 {
   #price-info {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     padding: 0px 20px;
+  }
+	
+  #was-price {
+    margin-left: 20px;
   }
 
   #add-remove {
@@ -783,7 +789,48 @@ h1 {
     justify-content: center;
   }
 
-  #cart-logo {
-    display: none;
+}
+
+/* TABLET */
+@media only screen and (max-width: 500px) {
+  .container {
+    width: 100vw;
+    height: 280px;
+  }
+	
+  .mySlides {
+    padding: 0px;
+    height: 280px;
+    width: 100vw;
+  }
+
+  #prev-img {
+    top: 0;
+    height: 280px;
+  }
+	
+  #next-img {
+    top: 0;
+    right: 0px;
+    height: 280px;
+  }
+	
+  #product-desc {
+    padding: 0px 20px;
+  }
+	
+  #price-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+  }
+	
+  #was-price {
+    margin-left: 0px;
   }
 }
+
+
+
+
