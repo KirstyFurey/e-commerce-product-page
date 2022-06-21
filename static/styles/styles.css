@@ -86,10 +86,12 @@ ul {
 }
 
 li {
+  display: flex;
+  align-items: center;
+  height: 95px;
   color: hsl(219, 9%, 45%);
   text-decoration: none;
   list-style-type: none;
-  align-items: center;
   padding: 0px 15px;
   margin: 0px;
 }
@@ -97,11 +99,8 @@ li {
 li:hover {
   color: hsl(220, 13%, 13%);
   cursor: pointer;
-  box-sizing: border-box;
-  border-bottom-style: solid;
-  border-bottom-color: hsl(26, 100%, 55%);
-  border-bottom-width: thick;
   transition: all 0.2s ease;
+  box-shadow: 0 4px 0 0 hsl(26, 100%, 55%); /* USE BOX SHADOW OFSET AT BOTTOM INSTEAD OF BORDER BOX TO HAVE THE HOVER STATE WITHOUT MOVING THE LI TEXT ON HOVER */
 }
 
 #nav-cart-logo {
