@@ -22,6 +22,8 @@ const checkout = document.getElementById("checkout"); // GET THE CHECKOUT BUTTON
 const qty = document.getElementById("quantity"); // GET THE ELEMENT THAT HOLDS THE QUANTITY TO ADD TO BASKET
 const addToCart = document.getElementById("add-to-cart"); // GET THE ADD TO CART BUTTON
 const cartRoundal = document.getElementById("cart-roundal"); // GET THE ROUNDAL THAT APPEARS ON THE CART ICON WHEN SOMETHING IS IN THE CART
+const addQuantity = document.getElementById("add"); // GET THE ADD BUTTON TO INCREASE QUANTITY TO ADD TO BASKET
+const removeQuantity = document.getElementById("remove"); // GET THE REMOVE BUTTON TO DECREMENT QUANTITY TO ADD TO BASKET
 
 
 //OPEN AND CLOSE MULTIPLE MODALS
@@ -48,12 +50,12 @@ let lbSlideIndex = 1;
 lbShowSlides(lbSlideIndex);
 
 // Next/previous controls
-function lbPlusSlides(n) {
+const lbPlusSlides = (n) => {
   lbShowSlides(lbSlideIndex += n);
 }
 
 // Thumbnail image controls
-function lbCurrentSlide(n) {
+const lbCurrentSlide = (n) => {
   lbShowSlides(lbSlideIndex = n);
 }
 
@@ -82,12 +84,12 @@ let slideIndex = 1;
 showSlides(slideIndex);
 
 // Next/previous controls
-function plusSlides(n) {
+const plusSlides = (n) => {
   showSlides(slideIndex += n);
 }
 
 // Thumbnail image controls
-function currentSlide(n) {
+const currentSlide = (n) => {
   showSlides(slideIndex = n);
 }
 
@@ -114,9 +116,13 @@ function showSlides(n) {
 //INCREMENT THE COUNTER ON ADD / REMOVE CLICK
 let qClick = 1;
 
-function addQty() {
+const addQtyFtn = () => {
   qClick +=1;
   qty.innerHTML = qClick;
+}
+
+addQuantity.onclick = () => {
+  addQtyFtn();
 }
 
 const removeQty = () => {
@@ -126,6 +132,10 @@ const removeQty = () => {
     qClick -=1;
     qty.innerHTML = qClick;
   }
+}
+
+removeQuantity.onclick = () => {
+  removeQty();
 }
 
 const addCart = () => {
