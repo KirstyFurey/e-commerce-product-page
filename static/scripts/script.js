@@ -14,13 +14,17 @@ const prices = [
 
 // GLOBAL VARIABLES
 
+const btns = document.getElementsByClassName('btn'); // GET ANY ELEMENT WITH A CLASS OF BTN FOR MODAL
+const close = document.getElementsByClassName('close'); // GET ANY ELEMENT WITH CLASS OF CLOSE
+const modals = document.getElementsByClassName('modal'); // GET ANY ELEMENT WITH CLASS OF MODAL
 const empty = document.getElementById("empty"); // GET THE EMPTY CART ICON
+const checkout = document.getElementById("checkout"); // GET THE CHECKOUT BUTTON
+const qty = document.getElementById("quantity"); // GET THE ELEMENT THAT HOLDS THE QUANTITY TO ADD TO BASKET
+const addToCart = document.getElementById("add-to-cart"); // GET THE ADD TO CART BUTTON
+const cartRoundal = document.getElementById("cart-roundal"); // GET THE ROUNDAL THAT APPEARS ON THE CART ICON WHEN SOMETHING IS IN THE CART
+
 
 //OPEN AND CLOSE MULTIPLE MODALS
-const btns = document.getElementsByClassName('btn');
-const close = document.getElementsByClassName('close');
-const modals = document.getElementsByClassName('modal');
-
 [...btns].forEach((btn, ind) => {
   btn.onclick = () => (modals[ind].style.display = 'block');
 });
@@ -30,7 +34,7 @@ const modals = document.getElementsByClassName('modal');
 });
 
 
-// WORKS BY ADDING THE CLASS 'MODAL' TO THE CONTAINER ELEMENT HOLDING THE ELEMENT WITH THE MODAL CONTENT, AND SETTING THIS TO THE FULL SIZE OF THE PAGE, SO CLICKING ANYWHERE OUTSIDE OF THE ELEMENT WITH THE MODAL CONTENT IS CLICKING ON THE ELEMENT WITH THE CLASS OF MODAL
+// CLOSE MODAL ON CLICK OUTSIDE MODAL CONTENT. WORKS BY ADDING THE CLASS 'MODAL' TO THE CONTAINER ELEMENT (THAT HOLDS THE MODAL CONTENT), AND SETTING THIS TO THE FULL SIZE OF THE PAGE, SO CLICKING ANYWHERE OUTSIDE OF THE ELEMENT WITH THE MODAL CONTENT IS CLICKING ON THE ELEMENT WITH THE CLASS OF MODAL
 window.onclick = (e) => {
   [...modals].forEach((modals) => {
     if (e.target === modals) {
@@ -55,8 +59,8 @@ function lbCurrentSlide(n) {
 
 function lbShowSlides(n) {
   let i;
-  let lbSlides = document.getElementsByClassName("lb-mySlides");
-  let lbThumb = document.getElementsByClassName("lb-thumbnail");
+  const lbSlides = document.getElementsByClassName("lb-mySlides");
+  const lbThumb = document.getElementsByClassName("lb-thumbnail");
   if (n > lbSlides.length) {
     lbSlideIndex = 1
   }
@@ -89,8 +93,8 @@ function currentSlide(n) {
 
 function showSlides(n) {
   let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let thumb = document.getElementsByClassName("thumbnail");
+  const slides = document.getElementsByClassName("mySlides");
+  const thumb = document.getElementsByClassName("thumbnail");
   if (n > slides.length) {
     slideIndex = 1
   }
@@ -108,10 +112,7 @@ function showSlides(n) {
 }
 
 //INCREMENT THE COUNTER ON ADD / REMOVE CLICK
-const qty = document.getElementById("quantity");
 let qClick = 1;
-//const add = document.getElementById("add");
-//const remove = document.getElementById("remove");
 
 function addQty() {
   qClick +=1;
@@ -127,25 +128,14 @@ const removeQty = () => {
   }
 }
 
-/*add.onclick = () => {
-	addQty;
-}*/
-/*
-remove.onclick = () => {
-	removeQty;
-}*/
-
-const addToCart = document.getElementById("add-to-cart");
-const cartRoundal = document.getElementById("cart-roundal");
-
 const addCart = () => {
   if (qClick >= 1) {
     if (document.getElementById("added")) {
-      let newQty = document.getElementById("cart-qty").innerHTML;
-      let addQty = document.getElementById("cart-qty");
+      const newQty = document.getElementById("cart-qty").innerHTML;
+      const addQty = document.getElementById("cart-qty");
       addQty.innerHTML = +newQty + +qClick;
       cartRoundal.innerHTML = +newQty + +qClick;
-      let newPrice = document.getElementById("new-price");
+      const newPrice = document.getElementById("new-price");
       newPrice.innerHTML = " $" + prices[0].price * +addQty.innerHTML;
       qClick = 1;
       qty.innerHTML = qClick;
@@ -164,10 +154,10 @@ addToCart.onclick = () => {
 //POPULATE THE CART WITH PRODUCT PAGE INFO - DONE THIS WAY AS ON A REAL SITE WITH MULTIPLE PAGES THE CART INFO NEEDS TO POPULATE DYNAMICALLY WITH MULTIPLE PRODUCTS
 const updateCart = () => {
   // HIDE THE CART EMPTY MESSAGE
-  let emptyMsg = document.getElementById("empty-msg");
+  const emptyMsg = document.getElementById("empty-msg");
   emptyMsg.style.display = "none";
   // CREATE THE DIV TO HOLD CART INFO. APPEND TO CART MODAL
-  let cartCreateProd = document.createElement("div");
+  const cartCreateProd = document.createElement("div");
   cartCreateProd.setAttribute("id", "added");
   const getCart = document.getElementById("cart-cont");
   getCart.appendChild(cartCreateProd);
@@ -176,7 +166,7 @@ const updateCart = () => {
   cartCreateProd.style.justifyContent = "space-between";
   cartCreateProd.style.alignItems = "center";
   // CREATE AND APPEND THE PRODUCT THUMBNAIL
-  let cartIm = document.createElement("img");
+  const cartIm = document.createElement("img");
   cartCreateProd.appendChild(cartIm);
   cartIm.setAttribute("src", "static/images/image-product-1-thumbnail.jpg");
   cartIm.setAttribute("height", "50");
@@ -184,7 +174,7 @@ const updateCart = () => {
   cartIm.setAttribute("alt", "cart image");
   cartIm.style.borderRadius = ('3px');
   // CREATE DIV TO HOUSE PRODUCT INFO PRICE & QUANTITY, APPEND TO CART MODAL
-  let cartContainer = document.createElement("div");
+  const cartContainer = document.createElement("div");
   cartContainer.setAttribute("id", "cart-container");
   cartCreateProd.appendChild(cartContainer);
   cartContainer.style.height = "45px";
@@ -192,28 +182,28 @@ const updateCart = () => {
   cartContainer.style.marginRight = "40px";
   cartContainer.style.color = "hsl(219, 9%, 45%)";
   // CREATE AND APPEND DIV FOR THE PRODUCT TITLE
-  let title = document.createElement("div");
+  const title = document.createElement("div");
   cartContainer.appendChild(title);
   title.innerHTML = prices[0].name;
   title.style.overflow = "hidden";
   title.style.whiteSpace = "nowrap";
   title.style.textOverflow = "ellipsis"
   // ADD DIV TO HOUSE PRICE AND QUANTITY
-  let cartPriceCont = document.createElement("div");
+  const cartPriceCont = document.createElement("div");
   cartPriceCont.setAttribute("id", "price-container");
   cartContainer.appendChild(cartPriceCont);
   // CREATE AND APPEND THE PRODUCT PRICE
-  let getPrice = document.getElementById("price");
-  let cartPrice = document.createElement("span");
+  const getPrice = document.getElementById("price");
+  const cartPrice = document.createElement("span");
   cartPriceCont.appendChild(cartPrice);
   cartPrice.innerHTML = getPrice.innerHTML + " x";
   // CREATE AND APPEND ITEM QUANTITY
-  let prodQty = document.createElement("span");
+  const prodQty = document.createElement("span");
   prodQty.setAttribute("id", "cart-qty");
   cartPriceCont.appendChild(prodQty);
   prodQty.innerHTML = qClick;
   // CREATE AND APPEND TOTAL BASKET PRICE
-  let totalPrice = document.createElement("span");
+  const totalPrice = document.createElement("span");
   totalPrice.setAttribute("id", "new-price");
   cartPriceCont.appendChild(totalPrice);
   totalPrice.innerHTML = " $" + prices[0].price * qClick;
@@ -223,17 +213,20 @@ const updateCart = () => {
   cartCreateProd.appendChild(empty);
   cartRoundal.style.display = "block";
   cartRoundal.innerHTML = qClick;
+  // APPEND THE CHECKOUT BUTTON
+  checkout.style.display = "flex";
 }
 
 // EMPTY THE CART AND RESET ALL VALUES
 empty.onclick = () => {
-  let emptyCart = document.getElementById("added");
+  const emptyCart = document.getElementById("added");
   if (confirm("Are you sure you want to remove this item from your basket?")) {
     emptyCart.remove();
-    let emptyMsg = document.getElementById("empty-msg");
+    const emptyMsg = document.getElementById("empty-msg");
     emptyMsg.style.display = "block";
     cartRoundal.innerHTML = "";
     cartRoundal.style.display = "none";
+    checkout.style.display = "none";
   } else {
     return;
   }
