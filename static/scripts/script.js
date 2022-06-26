@@ -237,6 +237,8 @@ empty.onclick = () => {
     cartRoundal.innerHTML = "";
     cartRoundal.style.display = "none";
     checkout.style.display = "none";
+    const cartModal = document.getElementById("cart-modal");
+    cartModal.style.display = "none";
   } else {
     return;
   }
