@@ -24,6 +24,7 @@ const addToCart = document.getElementById("add-to-cart"); // GET THE ADD TO CART
 const cartRoundal = document.getElementById("cart-roundal"); // GET THE ROUNDAL THAT APPEARS ON THE CART ICON WHEN SOMETHING IS IN THE CART
 const addQuantity = document.getElementById("add"); // GET THE ADD BUTTON TO INCREASE QUANTITY TO ADD TO BASKET
 const removeQuantity = document.getElementById("remove"); // GET THE REMOVE BUTTON TO DECREMENT QUANTITY TO ADD TO BASKET
+const cartModal = document.getElementById("cart-modal"); // GET THE CART MODAL
 
 
 //OPEN AND CLOSE MULTIPLE MODALS
@@ -52,6 +53,7 @@ lbShowSlides(lbSlideIndex);
 // Next/previous controls
 const lbPlusSlides = (n) => {
   lbShowSlides(lbSlideIndex += n);
+  showSlides(slideIndex += n);
 }
 
 // Thumbnail image controls
@@ -237,9 +239,9 @@ empty.onclick = () => {
     cartRoundal.innerHTML = "";
     cartRoundal.style.display = "none";
     checkout.style.display = "none";
-    const cartModal = document.getElementById("cart-modal");
     cartModal.style.display = "none";
   } else {
+    cartModal.style.display = "none";
     return;
   }
 }
