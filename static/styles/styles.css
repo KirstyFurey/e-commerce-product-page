@@ -605,7 +605,7 @@ h1 {
   color: hsl(228, 45%, 44%); 
 }
 
-/* MOBILE */
+/* TABLET */
 @media only screen and (max-width: 900px) {
 
   /* NAV */
@@ -815,8 +815,17 @@ h1 {
 
 }
 
-/* TABLET */
+/* MOBILE */
 @media only screen and (max-width: 500px) {
+	
+  #c-modal {
+    width: 95vw;
+  }
+	
+  #checkout-button {
+    width: 95%;
+  }
+	
   .container {
     width: 100vw;
     height: 280px;

@@ -39,8 +39,8 @@ const cartModal = document.getElementById("cart-modal"); // GET THE CART MODAL
 
 // CLOSE MODAL ON CLICK OUTSIDE MODAL CONTENT. WORKS BY ADDING THE CLASS 'MODAL' TO THE CONTAINER ELEMENT (THAT HOLDS THE MODAL CONTENT), AND SETTING THIS TO THE FULL SIZE OF THE PAGE, SO CLICKING ANYWHERE OUTSIDE OF THE ELEMENT WITH THE MODAL CONTENT IS CLICKING ON THE ELEMENT WITH THE CLASS OF MODAL
 window.onclick = (e) => {
-  [...modals].forEach((modals) => {
-    if (e.target === modals) {
+ [...modals].forEach((modals) => {
+    if (e.target == modals) {
       modals.style.display = 'none';
     }
   });
