@@ -862,6 +862,14 @@ h1 {
   #was-price {
     margin-left: 0px;
   }
+	
+  #add-remove {
+    width: 95vw;
+  }	
+	
+  #add-to-cart {
+    width: 95vw;
+  }
 }
 
 

@@ -10,7 +10,7 @@ const prices = [
     name: 'Summer Limited Edition Sneakers',
     price: 250,
   }
-]
+];
 
 // GLOBAL VARIABLES
 
@@ -59,6 +59,7 @@ const lbPlusSlides = (n) => {
 // Thumbnail image controls
 const lbCurrentSlide = (n) => {
   lbShowSlides(lbSlideIndex = n);
+  showSlides(slideIndex = n);
 }
 
 function lbShowSlides(n) {
@@ -88,11 +89,13 @@ showSlides(slideIndex);
 // Next/previous controls
 const plusSlides = (n) => {
   showSlides(slideIndex += n);
+  lbShowSlides(lbSlideIndex += n);
 }
 
 // Thumbnail image controls
 const currentSlide = (n) => {
   showSlides(slideIndex = n);
+  lbShowSlides(lbSlideIndex = n);
 }
 
 function showSlides(n) {
