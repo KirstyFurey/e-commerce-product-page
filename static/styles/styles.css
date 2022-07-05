@@ -41,7 +41,7 @@ button {
 }
 
 /* The Close Button */
-#close {
+#close{
   color: #aaa;
   float: left;
   font-size: 28px;
@@ -334,6 +334,28 @@ li:hover {
   z-index: 1; /* Sit on top */
   overflow: auto; /* Enable scroll if needed */
   background-color: #fff;
+}
+
+#cart-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* The Cart Close Button - most specifically for Safari to counter the issue with modals not closing on safari only on window click */
+#cart-close{
+  color: #aaa;
+  font-size: 22px;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+#cart-close:hover,
+#cart-close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 #cart-modal-header {
