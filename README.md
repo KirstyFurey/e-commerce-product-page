@@ -6,16 +6,14 @@ This is a solution to the [E-commerce product page challenge on Frontend Mentor]
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Links](#links)
+  - [Repository Link](#repository-link)
+  - [Website Live View](#website-live-view)
+  - [Deployment](#deployment)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -29,12 +27,32 @@ Users should be able to:
 - Switch the large product image by clicking on the small thumbnail images
 - Add items to the cart
 - View the cart and remove items from it
+- View the total price for number of items in the cart
 
 
-### Links
+### Repository Link ###
+The site remote repository can be located here:
+</br>
+*https://github.com/KirstyFurey/e-commerce-product-page*
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+### Website Live View ###
+The site can be accessed live via:
+</br>
+*https://kirstyfurey.github.io/e-commerce-product-page/*
+
+### Deployment ###
+To host the site on GitHub Pages, I followed the steps below:
+1. Loaded Terminal
+2. Created a local Git repository for the project using the command `git init` 
+3. Added all files to the local repository using the command `git add .`
+4. Commited files to the local repository using the command `git commit -m "commit comment"`
+5. Create a remote repository on GitHub matching the name of my project
+6. Copied the remote repository link and added to the command `git remote add origin (link)` in Terminal
+7. Run command `git-remote -v` to ensure remote and local repositories are linked (returns push and fetch messages if they are)
+8. Run command `git push origin master`
+9. Repeat steps 3, 4, and 8 regularly throughout the project to keep repositories up to date and enable rollback, testing, and updates.
+10. Navigated to my project repository on GitHub, then to 'Settings' and 'Pages'
+11. Selected the master branch and saved to create the live link via GitHub pages.
 
 ## My process
 
@@ -46,33 +64,388 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+How to open and close multiple modals using JavaScript:
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
+js
 ```
-```css
-.proud-of-this-css {
-  color: papayawhip;
+[...btns].forEach((btn, ind) => {
+  btn.onclick = () => (modals[ind].style.display = 'block');
+});
+
+[...close].forEach((close, ind) => {
+  close.onclick = () => (modals[ind].style.display = 'none');
+});
+
+window.onclick = (e) => {
+ [...modals].forEach((modals) => {
+    if (e.target == modals) {
+      modals.style.display = 'none';
+    }
+  });
+};
 }
 ```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+Click thumbnails to replace main image and click main image to open a lightbox:
+
+html
+```
+<section>
+        <!-- IMAGE GALLERY CONTAINER -->
+        <div class="container">
+
+          <!-- FULL SIZE IMAGES -->
+          <div class="btn main-contain">
+            <div class="mySlides">
+              <img class="main-images btn" src="static/images/image-product-1.jpg" onclick="currentSlide(1)" alt="main1">
+            </div>
+
+            <div class="mySlides">
+              <img class="main-images btn image234" src="static/images/image-product-2.jpg" onclick="currentSlide(2)" alt="main2">
+            </div>
+
+            <div class="mySlides">
+              <img class="main-images btn image234" src="static/images/image-product-3.jpg" onclick="currentSlide(3)" alt="main3">
+            </div>
+
+            <div class="mySlides">
+              <img class="main-images btn image234" src="static/images/image-product-4.jpg" onclick="currentSlide(4)" alt="main4">
+            </div>
+          </div>
+
+          <!-- NEXT AND PREVIOUS BUTTONS -->
+          <div id="prev-img" onclick="plusSlides(-1)">
+            <button id="prev-chev">
+              <img src="static/images/icon-previous.svg" alt="prev" id="previous">
+            </button>
+          </div>
+          <div id="next-img" onclick="plusSlides(1)">
+            <button id="next-chev">
+              <img src="static/images/icon-next.svg" alt="next" id="next">
+            </button>
+          </div>
+
+          <!-- THUMBNAILS -->
+          <div class="thumb-contain">
+            <div class="thumb">
+              <img id="thumb-1" class="thumbnail"  src="static/images/image-product-1-thumbnail.jpg" onclick="currentSlide(1)" alt="thumb1">
+            </div>
+            <div class="thumb">
+              <img class="thumbnail" src="static/images/image-product-2-thumbnail.jpg" onclick="currentSlide(2)" alt="thumb2">
+            </div>
+            <div class="thumb">
+              <img class="thumbnail" src="static/images/image-product-3-thumbnail.jpg" onclick="currentSlide(3)" alt="thumb3">
+            </div>
+            <div class="thumb">
+              <img class="thumbnail" src="static/images/image-product-4-thumbnail.jpg" onclick="currentSlide(4)" alt="thumb4s">
+            </div>
+          </div>
+        </div>
+      </section>
+```
+
+css
+```
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.container {
+  /*width: 40vw;*/
+  margin-right: 50px;
+}
+
+.main-contain {
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  height: 340px;
+  width: 340px;
+  padding-right: 10px;
+}
+
+.main-images {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
+
+#prev-img, #next-image, #prev-chev, #next-chev {
+  display: none;
+}
+
+.thumb-contain {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.thumbnail {
+  margin: 20px 10px;
+  height: 70px;
+  width: 70px;
+  border-radius: 10px;
+}
+
+.thumb-contain:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.thumb {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.active,
+.thumbnail:hover {
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.active {
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: thin;
+  border-radius: 10px;
+  color: hsl(26, 100%, 55%);
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+js
+```
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+// IMAGES
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+const plusSlides = (n) => {
+  showSlides(slideIndex += n);
+  lbShowSlides(lbSlideIndex += n);
+}
+
+// Thumbnail image controls
+const currentSlide = (n) => {
+  showSlides(slideIndex = n);
+  lbShowSlides(lbSlideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  const slides = document.getElementsByClassName("mySlides");
+  const thumb = document.getElementsByClassName("thumbnail");
+  if (n > slides.length) {
+    slideIndex = 1
+  }
+  if (n < 1) {
+    slideIndex = slides.length
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < thumb.length; i++) {
+    thumb[i].className = thumb[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  thumb[slideIndex-1].className += " active";
+}
+```
+
+Use JavaScript to add and remove items from the cart, and update quantities and prices:
+
+html
+```
+<div id="cart-option">
+          <div id="add-remove">
+            <button class="cart-btn" id="remove">
+              <span>
+                <img src="static/images/icon-minus.svg" alt="remove" id="remove-icon">
+              </span>
+            </button>
+            <span id="quantity">1</span>
+            <button class="cart-btn" id="add">
+              <span>
+                <img src ="static/images/icon-plus.svg" alt="add">
+              </span>
+            </button>
+          </div>
+          <button id="add-to-cart">
+            <span id="add-cart-logo">
+              <svg id="cart-logo" width="35" height="16" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="currentColor" fill-rule="nonzero"/></svg>
+            </span>
+            <span id="add-cart">Add to cart</span>
+          </button>
+        </div>
+```
+
+css
+```
+#price-discount {
+  line-height: 22px;
+}
+
+#price {
+  font-size: 26px;
+  font-weight: 700;
+  padding-right: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#discount {
+  color: hsl(26, 100%, 55%);
+  background-color: hsl(25, 100%, 94%);
+  padding: 0px 8px;
+  font-size: 12px;
+  font-weight: 700;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 5px;
+}
+
+#was-price {
+  text-decoration: line-through;
+  color: hsl(219, 9%, 45%);
+}
+
+#cart-option {
+  display: flex;
+  align-items: center;
+}
+
+#add-remove {
+  display: flex;
+  align-items: center;
+  width: 180px;
+  height: 55px;
+  justify-content: space-between;
+  /*padding: 16px 0px;*/
+  background-color: hsl(223, 64%, 98%);
+  border-radius: 12px;
+  margin-right: 20px;
+}
+
+#quantity {
+  font-weight: 700;
+  padding: 0px 25px;
+}
+
+.cart-btn {
+  background-color: hsl(223, 64%, 98%);
+}
+
+#remove {
+  padding: 0px 15px;
+  display: flex;
+}
+
+#remove-icon {
+  align-items: center;
+}
+
+#add {
+  padding: 0px 15px;
+}
+
+#remove:hover, #add:hover {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#cart-logo {
+  color: white;
+}
+
+#add-to-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 280px;
+  height: 55px;
+  /*padding: 15px 70px;*/
+  background-color: hsl(26, 100%, 55%);
+  border-radius: 12px;
+  color: white;
+  font-weight: 700;
+}
+
+#add-to-cart:hover {
+  opacity: 0.65;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+```
+
+js
+```
+//INCREMENT THE COUNTER ON ADD / REMOVE CLICK
+let qClick = 1;
+
+const addQtyFtn = () => {
+  qClick +=1;
+  qty.innerHTML = qClick;
+}
+
+addQuantity.onclick = () => {
+  addQtyFtn();
+}
+
+const removeQty = () => {
+  if (qClick === 1) {
+    return
+  } else {
+    qClick -=1;
+    qty.innerHTML = qClick;
+  }
+}
+
+removeQuantity.onclick = () => {
+  removeQty();
+}
+
+const addCart = () => {
+  if (qClick >= 1) {
+    if (document.getElementById("added")) {
+      const newQty = document.getElementById("cart-qty").innerHTML;
+      const addQty = document.getElementById("cart-qty");
+      addQty.innerHTML = +newQty + +qClick;
+      cartRoundal.innerHTML = +newQty + +qClick;
+      const newPrice = document.getElementById("new-price");
+      newPrice.innerHTML = " $" + prices[0].price * +addQty.innerHTML;
+      qClick = 1;
+      qty.innerHTML = qClick;
+    } else {
+      updateCart();
+      qClick = 1;
+      qty.innerHTML = qClick;
+    }
+  }
+}
+
+addToCart.onclick = () => {
+	addCart();
+}
+```
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+I've had some issues with functions working correctly when contained fully within the .js file - particulalrly arrow functions and onclick events, there are a lot of instances where the onclick event is within the html file, and there are functions written in the old style as opposed to as arrow functions. 
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+I've left these as is for now, as the code as a whole still works perfectly in all tests across devices, and browsers, but will look at amending these in future to see why moving the onclick events into the js file breaks it. 
+
+I will also look at refactoring the code so that the ```updateCart()``` function is not so long - by creating separate functions for the different sections and calling them from the ```updateCart()``` function.
 
 ### Useful resources
 
@@ -91,16 +464,3 @@ Use this section to outline areas that you want to continue focusing on in futur
 - [Disable onclick event on mobile](https://localcoder.org/disable-anchor-menu-click-on-mobile-devices) - learned `pointer-events: none;` to disable the onclick function that opens the lightbox modal on mobile devices.
 
 
-## Author
-
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
